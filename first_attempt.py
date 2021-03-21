@@ -55,17 +55,9 @@ def check_watches(fn):
                     pds=False
                 watchno=re.split("#", watchinfo)
                 watchsp=re.split(" Watch", watchinfo)
-                print(watchno)
-                print(watchsp)
                 watches.append(WatchType(no=watchno[1],type=watchsp[0],pds=pds))
 
         return watches
-
-def http_status(status_code):
-    if status_code != 200:
-        print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
-    else:
-        print('HTTP status response OK: ',status_code)
 
 #No watches are currently valid
 
@@ -79,17 +71,17 @@ if __name__ == '__main__':
         fn_watches="watches.txt"
         res = requests.get('https://www.spc.noaa.gov/products/outlook/')
         print(res.text, file=open(fn_outlooks, 'w'))
-        http_status(res.status_code)
+        if res.status_code != 200:
+            print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
         res = requests.get('https://www.spc.noaa.gov/products/watch/')
         print(res.text, file=open(fn_watches, 'w'))
-        http_status(res.status_code)
+        if res.status_code != 200:
+            print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
 
     else:
         print('Running in debug mode; specify argument "--gotime" to run the real deal')
         fn_outlooks="outlooks_debug.txt"
-        http_status(200)
         fn_watches="watches_debug.txt"
-        http_status(200)
 
 #Check general severe risk for Day 1
     risk=check_risk(fn_outlooks)
@@ -102,6 +94,7 @@ if __name__ == '__main__':
     if not watches:
         print("No watches in effect")
     else:
+        print("Watches in effect:")
         for watch in watches:
             print(watch.type + " Watch " + watch.no)
             if watch.pds:
