@@ -3,7 +3,7 @@
 import requests
 import re
 import jinja2 as j2
-
+import argparse
 
 def check_risk(fn):
     with open(fn) as fp:
@@ -20,24 +20,25 @@ def check_risk(fn):
                 risk=re.sub(r'<.*?$', '', risk)
                 risk=re.sub(r'\s+', '', risk)
                 return risk
-                break
 
 #        Forecast Risk of Severe Storms: <span class="enhanced">Enhanced Risk</span>
 
 
 if __name__ == '__main__':
-    debug='false'
-#    debug='true'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--gotime', action='store_true', help='"gotime" should be specified to actively run the script; otherwise it will be run in debug mode on the fixed input files in this directory')
+    args = parser.parse_args()
 
-    if debug == "true":
-        filename="outlooks_debug.txt"
-        status_code=200
-    else:
+    if args.gotime:
         filename="outlooks.txt"
         res = requests.get('https://www.spc.noaa.gov/products/outlook/')
         print(res.text, file=open(filename, 'w'))
         status_code=res.status_code
         txt=res.text
+    else:
+        print('Running in debug mode; specify argument "--gotime" to run the real deal')
+        filename="outlooks_debug.txt"
+        status_code=200
 
     if status_code != 200:
         print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
