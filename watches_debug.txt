@@ -6,7 +6,7 @@
   <meta name="DC.description" content="SPC Current Tornado/Severe Thunderstorm Watches Page" />
   <meta name="DC.subject" content="Storm Prediction Center forecast products: tornado/severe thunderstorm watches" />
 
-  <meta name="DC.date.reviewed" scheme="ISO8601" content="2021-03-21" />
+  <meta name="DC.date.reviewed" scheme="ISO8601" content="2021-03-22" />
   <meta name="DC.date.created" scheme="ISO8601" content="2001-01-01" />
   <meta name="DC.format" content="text/html; charset=iso-8859-1" />
 
@@ -34,78 +34,76 @@
   <link rel="alternate" type="application/rss+xml" title="SPC Multimedia Briefings RSS" href="http://www.spc.noaa.gov/products/spcmbrss.xml" />
   <META NAME="ROBOTS" CONTENT="ALL">
 
-  <meta name="description" content="Severe weather, tornado, thunderstorm, fire weather,
+  <meta name="description"
+   content="Severe weather, tornado, thunderstorm, fire weather,
    storm report, tornado watch, severe thunderstorm watch,
    mesoscale discussion, convective outlook products from the Storm
    Prediction Center.">
-  <meta name="keywords" content="severe weather, wx, tornado, thunderstorm, fire weather,
+  <meta name="keywords"
+   content="severe weather, wx, tornado, thunderstorm, fire weather,
    mesoscale discussion, tornado watch, severe thunderstorm watch,
    convective outlook, storm report, tornado research, severe weather
    research, tornadogenesis, severe thunderstorm, lightning, hail damage,
    winter weather, wind damage, flash flood, flooding, radar, satellite,
    GOES, damaging downbursts, damaging winds, microbursts, natural hazard,
    climatology, NWS, NCEP, SPC, Storm Prediction Center">
-  <style type="text/css">
+  <style type ="text/css">
 	  td.off { background:#91b8ff; }
 	  td.on  { background:#003399; }
   </style>
-  <script type="text/javascript" src="/web/20210317225408js_/https://www.spc.noaa.gov/products/watch/getdata1.js"></script>
+  <script type="text/javascript" src="./getdata1.js"></script>
 </head>
-<body onload="settheDate()" leftmargin="0" background="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/nws_background.gif" topmargin="0" rightmargin="0" marginheight="0" marginwidth="0"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
-<style type="text/css">
-body {
-  margin-top:0 !important;
-  padding-top:0 !important;
-  /*min-width:800px !important;*/
-}
-</style>
+<body onload="settheDate()"
+      leftmargin="0" background="/nwscwi/nws_background.gif"
+      topmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
 
 <!-- Header here-->
-<table cellspacing="0" cellpadding="0" width="100%" background="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/topbanner.jpg" border="0">
+<table cellspacing="0" cellpadding="0" width="100%" background="/nwscwi/topbanner.jpg" border="0">
   <tr>
     <td align="right" height="19">
-      <a href="#contents"><img height="1" alt="Skip Navigation Links" src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/skipgraphic.gif" width="1" border="0"></a>
-      <a href="https://www.weather.gov/" target="_blank"><span class="nwslink">weather.gov</span></a>&nbsp;</td>
+      <a href="#contents"><img height="1" alt="Skip Navigation Links"
+         src="/nwscwi/skipgraphic.gif" width="1" border="0"></a>
+      <a href="//www.weather.gov/" target="_blank"><span class="nwslink">weather.gov</span></a>&nbsp;</td>
   </tr>
 </table>
 
 <table cellspacing="0" cellpadding="0" width="100%" border="0">
   <tr>
-    <td rowspan="2"><a href="https://www.noaa.gov/" target="_blank"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/noaaleft.jpg" alt="NOAA logo-Select to go to the NOAA homepage" width="85" height="78" border="0"/></a></td>
-    <td><img src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/noaa_nws_title.jpg" width="500" height="20" border="0" alt="NOAA's National Weather Service"></td>
-    <td rowspan="2" width="100%" background="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/ncep_bkgrnd.jpg">&nbsp;</td>
-    <td rowspan="2" align="right"><a href="https://www.weather.gov/" target="_blank"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/nwsright.jpg" alt="Select to go to the NWS homepage" width="85" height="78" border="0"/></a></td>
+    <td rowspan="2"><a href="//www.noaa.gov/" target="_blank"><img src="/nwscwi/noaaleft.jpg" alt="NOAA logo-Select to go to the NOAA homepage" width="85" height="78" border="0" /></a></td>
+    <td><img src="/nwscwi/noaa_nws_title.jpg" width="500" height="20" border="0" alt="NOAA's National Weather Service"></td>
+    <td rowspan="2" width="100%" background="/nwscwi/ncep_bkgrnd.jpg">&nbsp;</td>
+    <td rowspan="2" align="right"><a href="//www.weather.gov/" target="_blank"><img src="/nwscwi/nwsright.jpg" alt="Select to go to the NWS homepage" width="85" height="78" border="0" /></a></td>
   </tr>
   <tr>
-    <td><a href="/web/20210317225408/https://www.spc.noaa.gov/"><img height="58" alt="Storm Prediction Center" src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/spc.jpg" width="500" border="0"></td>
+    <td><a href="/"><img height="58" alt="Storm Prediction Center" src="/nwscwi/spc.jpg" width="500" border="0"></td>
   </tr>
 </table>
 
-<table cellspacing="0" cellpadding="0" width="100%" background="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/navbkgrnd.gif" border="0">
+<table cellspacing="0" cellpadding="0" width="100%" background="/nwscwi/navbkgrnd.gif" border="0">
   <tr>
-    <td align="left" valign="top" width="94"><img height="23" alt="navigation bar left" src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/navbarleft.jpg" width="94" border="0"></td>
+    <td align="left" valign="top" width="94"><img height="23" alt="navigation bar left" src="/nwscwi/navbarleft.jpg" width="94" border="0"></td>
     <td class="nav" id="menuitem" align="center" width="15%">
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/sitemap.html">Site Map</a></td>
+      <a href="/sitemap.html">Site Map</a></td>
     <td class="nav" id="menuitem" align="right" width="15%">
-      <a href="https://www.weather.gov/pa/">News</a></td>
+      <a href="//www.weather.gov/pa/">News</a></td>
     <td class="nav" id="menuitem" align="right" width="20%">
-      <a href="https://www.weather.gov/organization.php">Organization</a></td>
+      <a href="//www.weather.gov/organization.php">Organization</a></td>
     <td width="20%">&nbsp;</td>
     <td align="left" class="searchinput" width="20%" nowrap="nowrap"><!-- Begin search code -->
 
-      <form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get">
+      <form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
         <div style="margin:0;padding:0;display:inline">
-          <input name="utf8" type="hidden" value="?"/>
+          <input name="utf8" type="hidden" value="&#x2713;" />
         </div>
         <label for="query" class="yellow">Search for:&nbsp;</label>
-        <input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text"/>
-        <input type="radio" id="affiliate" name="affiliate" checked="checked" value="spc" id="spc"/>
+        <input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" />
+        <input type="radio" id="affiliate" name="affiliate" checked="checked" value="spc" id="spc" />
         <label class="yellow" for="spc">SPC</label>
-        <input type="radio" id="affiliate" name="affiliate" value="ncep.noaa.gov" id="ncep"/>
+        <input type="radio" id="affiliate" name="affiliate" value="ncep.noaa.gov" id="ncep" />
         <label class="yellow" for="ncep">NCEP</label>
-        <input type="radio" id="affiliate" name="affiliate" value="noaa.gov" id="noaa"/>
+        <input type="radio" id="affiliate" name="affiliate" value="noaa.gov" id="noaa" />
         <label class="yellow" for="noaa">All NOAA</label>
-        <input name="commit" type="submit" value="Go"/>
+        <input name="commit" type="submit" value="Go" />
       </form>
 
       <script type="text/javascript">
@@ -114,7 +112,7 @@ body {
 
           var script = document.createElement("script");
           script.type = "text/javascript";
-          script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+          script.src = "//search.usa.gov/javascripts/remote.loader.js";
           document.getElementsByTagName("head")[0].appendChild(script);
 
         //]]>
@@ -122,7 +120,7 @@ body {
 
     </td><!-- End search code -->
     <td width="10%">&nbsp;</td>
-    <td align="right" valign="bottom" width="24"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/navbarendcap.jpg" alt="navigation bar end cap" width="24" height="23" border="0"/></td>
+    <td align="right" valign="bottom" width="24"><img src="/nwscwi/navbarendcap.jpg" alt="navigation bar end cap" width="24" height="23" border="0" /></td>
   </tr>
 
 </table>
@@ -134,17 +132,17 @@ body {
 
 <!-- Left menu here-->
 <!--Use google lib for jquery -->
-<script type="text/javascript" src="/web/20210317225408js_/https://www.spc.noaa.gov/misc/js/jquery.min.js"></script>
-<script type="text/javascript" src="/web/20210317225408js_/https://www.spc.noaa.gov/misc/js/nwsexit-spc.js"></script>
+<script type="text/javascript" src="/misc/js/jquery.min.js"></script>
+<script type="text/javascript" src="/misc/js/nwsexit-spc.js"></script>
 
 <table cellspacing="0" cellpadding="2" width="130" border="0">
         <tr valign="top">
           <td class="searchinput" align="left">
-            <form method="post" action="https://forecast.weather.gov/zipcity.php">
-              <div id="Layer2" style="position:absolute; width:200px;  height:115px; z-index:2; visibility: hidden">Search by city or zip code. Press enter or select the go button to submit request</div>
-              <span class="yellow"><label for="city_state">Local&nbsp;forecast&nbsp;by<br/>&quot;City,&nbsp;St&quot;&nbsp;or&nbsp;&quot;ZIP&quot;</label></span><br/>
-              <input type="text" id="city_state" name="inputstring" size="10" value="City, St" onfocus="this.value='';"/>&nbsp;
-              <input type="submit" name="Go2" value="Go"/>
+            <form method="post" action="//forecast.weather.gov/zipcity.php">
+              <div ID="Layer2" STYLE="position:absolute; width:200px;  height:115px; z-index:2; visibility: hidden">Search by city or zip code. Press enter or select the go button to submit request</div>
+              <span class="yellow"><label for="city_state">Local&nbsp;forecast&nbsp;by<br />&quot;City,&nbsp;St&quot;&nbsp;or&nbsp;&quot;ZIP&quot;</label></span><br />
+              <input type="text" id="city_state" name="inputstring" size="10" value="City, St" onfocus="this.value='';" />&nbsp;
+              <input type="submit" name="Go2" value="Go" />
             </form>
           </td>
         </tr>
@@ -152,60 +150,60 @@ body {
           <td class="white" id="menuitem">
             <hr width="90%"/>
             <div style="text-align:center;">
-              <span><a href="https://www.facebook.com/NWSSPC" target="SPC_Facebook" title="NOAA NWS Storm Prediction Center Facebook"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/misc/facebook_logo.gif" style="border: 0px;"/><br/>SPC on Facebook</a></span>
+              <span><a href="https://www.facebook.com/NWSSPC" target="SPC_Facebook" title="NOAA NWS Storm Prediction Center Facebook"><img src="/misc/facebook_logo.gif" style="border: 0px;" /><br />SPC on Facebook</a></span>
               <hr width="80%"/>
-              <span><a href="https://twitter.com/NWSSPC" target="_blank" title="NOAA NWS Storm Prediction Center Twitter"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/misc/twitter-bird-light-bgs.png" style="border: 0px;height: 40px;width: 40px;vertical-align: middle;"/>@NWSSPC</a></span>
+              <span><a href="https://twitter.com/NWSSPC" target="_blank" title="NOAA NWS Storm Prediction Center Twitter"><img src="/misc/twitter-bird-light-bgs.png" style="border: 0px;height: 40px;width: 40px;vertical-align: middle;" />@NWSSPC</a></span>
               <hr width="80%"/>
-              <span class="yellow"><a href="https://www.ncep.noaa.gov/newsletter/" target="NCEP_Newsletter">NCEP Quarterly Newsletter</a></span>
+              <span class="yellow"><a href="//www.ncep.noaa.gov/newsletter/" target="NCEP_Newsletter">NCEP Quarterly Newsletter</a></span>
             </div>
             <hr width="90%"/>
-            <a href="/web/20210317225408/https://www.spc.noaa.gov/"><span class="yellow">Home</span></a>&nbsp;(<a href="/web/20210317225408/https://www.spc.noaa.gov/classic.html" target="_blank"><span class="yellow">Classic</span></a>)<br/>
-            <span class="yellow">SPC&nbsp;Products</span><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/">All&nbsp;SPC&nbsp;Forecasts</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/">Current&nbsp;Watches</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/md/">Meso.&nbsp;Discussions</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/outlook/">Conv.&nbsp;Outlooks</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/exper/enhtstm/">Tstm.&nbsp;Outlooks</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/fire_wx/overview.html">Fire&nbsp;Wx&nbsp;Outlooks</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/spcrss.xml"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/nwscwi/xml2.gif" alt="XML logo" border="0" height="13" width="13"></a>&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/aboutrss.html">RSS&nbsp;Feeds</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="https://www.weather.gov/subscribe/">E-Mail Alerts</a><br/>
+            <a href="/"><span class="yellow">Home</span></a>&nbsp;(<a href="/classic.html" target="_blank"><span class="yellow">Classic</span></a>)<br />
+            <span class="yellow">SPC&nbsp;Products</span><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/">All&nbsp;SPC&nbsp;Forecasts</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/watch/">Current&nbsp;Watches</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/md/">Meso.&nbsp;Discussions</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/outlook/">Conv.&nbsp;Outlooks</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/exper/enhtstm/">Tstm.&nbsp;Outlooks</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/fire_wx/overview.html">Fire&nbsp;Wx&nbsp;Outlooks</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/spcrss.xml"><img src="/nwscwi/xml2.gif" alt="XML logo" border="0" height="13" width="13"></a>&nbsp;<a href="/aboutrss.html">RSS&nbsp;Feeds</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="//www.weather.gov/subscribe/">E-Mail Alerts</a><br />
 	    
-	    <span class="yellow">Weather&nbsp;Information</span><br/>
-	    &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/climo/online/">Storm&nbsp;Reports</a><br/>
-	    &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/exper/reports/">Storm&nbsp;Reports&nbsp;Dev.</a><br/>
-	    &nbsp;&nbsp;&nbsp;<a href="https://www.weather.gov/largemap.php" target="NWS_Hazards">NWS&nbsp;Hazards&nbsp;Map</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="https://www.weather.gov/Radar/" target="radar_window">National&nbsp;RADAR</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/archive/">Product&nbsp;Archive</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="https://www.weather.gov/nwr/" target="NWR_window">NOAA&nbsp;Weather&nbsp;Radio</a><br/>
+	    <span class="yellow">Weather&nbsp;Information</span><br />
+	    &nbsp;&nbsp;&nbsp;<a href="/climo/online/">Storm&nbsp;Reports</a><br />
+	    &nbsp;&nbsp;&nbsp;<a href="/exper/reports/">Storm&nbsp;Reports&nbsp;Dev.</a><br />
+	    &nbsp;&nbsp;&nbsp;<a href="//www.weather.gov/largemap.php" target="NWS_Hazards">NWS&nbsp;Hazards&nbsp;Map</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="//www.weather.gov/Radar/" target="radar_window">National&nbsp;RADAR</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/archive/">Product&nbsp;Archive</a><br />
+            &nbsp;&nbsp;&nbsp;<A href="//www.weather.gov/nwr/" target="NWR_window">NOAA&nbsp;Weather&nbsp;Radio</a><br />
 
-            <span class="yellow">Research</span><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/products/exper/">Non-op.&nbsp;Products</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/exper/">Forecast&nbsp;Tools</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/exper/archive/events/">Svr.&nbsp;Tstm.&nbsp;Events</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/publications/">SPC&nbsp;Publications</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="https://hwt.nssl.noaa.gov/" target="NOAA_HWT">SPC-NSSL&nbsp;HWT</a><br/>
+            <span class="yellow">Research</span><br />
+            &nbsp;&nbsp;&nbsp;<a href="/products/exper/">Non-op.&nbsp;Products</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/exper/">Forecast&nbsp;Tools</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/exper/archive/events/">Svr.&nbsp;Tstm.&nbsp;Events</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/publications/">SPC&nbsp;Publications</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="//hwt.nssl.noaa.gov/" target="NOAA_HWT">SPC-NSSL&nbsp;HWT</a><br />
 
-            <span class="yellow">Education&nbsp;&amp;&nbsp;Outreach</span><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/misc/aboutus.html">About&nbsp;the&nbsp;SPC</a><br/>
-	    &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/faq/">SPC&nbsp;FAQ</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/faq/tornado/">About&nbsp;Tornadoes</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/misc/AbtDerechos/derechofacts.htm">About&nbsp;Derechos</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/exper/spcousom">Video&nbsp;Lecture&nbsp;Series</a><br/>
-	    &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/wcm/">WCM&nbsp;Page</a><br/>
-	    &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/efscale/">Enh.&nbsp;Fujita&nbsp;Page</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/history/early.html">Our&nbsp;History</a><br/>
-            &nbsp;&nbsp;&nbsp;<a href="http://nwc.ou.edu/tours/" target="_blank">Public&nbsp;Tours</a><br/>
+            <span class="yellow">Education&nbsp;&&nbsp;Outreach</span><br />
+            &nbsp;&nbsp;&nbsp;<a href="/misc/aboutus.html">About&nbsp;the&nbsp;SPC</a><br />
+	    &nbsp;&nbsp;&nbsp;<a href="/faq/">SPC&nbsp;FAQ</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/faq/tornado/">About&nbsp;Tornadoes</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/misc/AbtDerechos/derechofacts.htm">About&nbsp;Derechos</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/exper/spcousom">Video&nbsp;Lecture&nbsp;Series</a><br />
+	    &nbsp;&nbsp;&nbsp;<a href="/wcm/">WCM&nbsp;Page</a><br />
+	    &nbsp;&nbsp;&nbsp;<a href="/efscale/">Enh.&nbsp;Fujita&nbsp;Page</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="/history/early.html">Our&nbsp;History</a><br />
+            &nbsp;&nbsp;&nbsp;<a href="http://nwc.ou.edu/tours/" target="_blank">Public&nbsp;Tours</a><br />
 
-            <span class="yellow">Misc.</span><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/staff/">Staff</a><br/>
+            <span class="yellow">Misc.</span><br />
+            &nbsp;&nbsp;&nbsp;<a href="/staff/">Staff</a><br />
             <!-- &nbsp;&nbsp;&nbsp;<a href="/misc/links.html">Links</a><br /> -->
 
-            <span class="yellow">Contact&nbsp;Us</span><br/>
-            &nbsp;&nbsp;&nbsp;<a href="/web/20210317225408/https://www.spc.noaa.gov/misc/feedback.html">SPC&nbsp;Feedback</a><br/><br/>
+            <span class="yellow">Contact&nbsp;Us</span><br />
+            &nbsp;&nbsp;&nbsp;<a href="/misc/feedback.html">SPC&nbsp;Feedback</a><br /><br />
           </td>
         </tr>
         <tr>
-          <td align="center"><a href="https://www.usa.gov/"><img src="/web/20210317225408im_/https://www.spc.noaa.gov/misc/usagov_logo_color_110w_30h.gif" alt="USA.gov is the U.S. Government's official Web portal to all Federal, state and local government Web resources and services." width="110" height="30" border="0"></a></td>
+          <td align="center"><a href="//www.USA.gov/"><img src="/misc/usagov_logo_color_110w_30h.gif" alt="USA.gov is the U.S. Government's official Web portal to all Federal, state and local government Web resources and services." width="110" height="30" border="0"></a></td>
         </tr>
       </table>
 
@@ -215,390 +213,148 @@ body {
 <br>
 <!-- Contents below-->
 <table width="586" border="0" cellpadding="0" cellspacing="0">
-<tr><td><b><font face="Arial, Helvetica, sans-serif" size="4">Current Convective Watches</font></b>&nbsp;(View <a href="http://www.nws.noaa.gov/cgi-bin/nwsexit.pl?url=http://www.youtube.com/watch?v=x3V3HZBs1Y4" target="YouTube Clip">What is a Watch?</a> clip)<br/>
-<font face="Arial, Helvetica, sans-serif" size="1">Updated:&nbsp;&nbsp;Wed Mar 17 22:52:09 UTC 2021</font><br/><br/>
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/validww.png" alt="Valid WW Image" usemap="#wwimgmap">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/wwlegend.png" alt="WW Graphics Legend">
+<tr><td><b><font face="Arial, Helvetica, sans-serif" size="4">Current Convective Watches</font></b>&nbsp;(View <a href="http://www.nws.noaa.gov/cgi-bin/nwsexit.pl?url=http://www.youtube.com/watch?v=x3V3HZBs1Y4" target="YouTube Clip">What is a Watch?</a> clip)<br />
+<font face="Arial, Helvetica, sans-serif" size="1">Updated:&nbsp;&nbsp;Mon Mar 22 23:30:40 UTC 2021</font><br /><br />
+<img src="validww.png" alt="Valid WW Image" usemap="#wwimgmap">
+<img src="wwlegend.png" alt="WW Graphics Legend">
  <map name="wwimgmap">
- <area shape="poly" coords="396,228,408,228,408,240,396,240,396,228" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="398,252,410,252,410,264,398,264,398,252" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="388,234,400,234,400,246,388,246,388,234" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="386,225,398,225,398,237,386,237,386,225" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="387,246,399,246,399,258,387,258,387,246" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="392,247,404,247,404,259,392,259,392,247" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="399,236,411,236,411,248,399,248,399,236" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="384,234,396,234,396,246,384,246,384,234" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="392,224,404,224,404,236,392,236,392,224" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="389,253,401,253,401,265,389,265,389,253" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="386,229,398,229,398,241,386,241,386,229" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="399,229,411,229,411,241,399,241,399,229" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="395,243,407,243,407,255,395,255,395,243" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="400,244,412,244,412,256,400,256,400,244" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="384,257,396,257,396,269,384,269,384,257" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="410,238,422,238,422,250,410,250,410,238" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="386,222,398,222,398,234,386,234,386,222" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="405,243,417,243,417,255,405,255,405,243" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="394,248,406,248,406,260,394,260,394,248" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="386,241,398,241,398,253,386,253,386,241" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="402,239,414,239,414,251,402,251,402,239" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="386,250,398,250,398,262,386,262,386,250" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="406,237,418,237,418,249,406,249,406,237" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="390,239,402,239,402,251,390,251,390,239" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="393,233,405,233,405,245,393,245,393,233" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="386,265,398,265,398,277,386,277,386,265" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="395,256,407,256,407,268,395,268,395,256" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="391,228,403,228,403,240,391,240,391,228" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="402,248,414,248,414,260,402,260,402,248" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="390,261,402,261,402,273,390,273,390,261" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="367,244,379,244,379,256,367,256,367,244" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="375,244,387,244,387,256,375,256,375,244" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="381,263,393,263,393,275,381,275,381,263" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="371,258,383,258,383,270,371,270,371,258" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="365,260,377,260,377,272,365,272,365,260" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="371,254,383,254,383,266,371,266,371,254" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="367,256,379,256,379,268,367,268,367,256" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="378,269,390,269,390,281,378,281,378,269" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="377,240,389,240,389,252,377,252,377,240" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="380,243,392,243,392,255,380,255,380,243" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="375,253,387,253,387,265,375,265,375,253" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="375,249,387,249,387,261,375,261,375,249" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="379,233,391,233,391,245,379,245,379,233" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="368,269,380,269,380,281,368,281,368,269" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="378,237,390,237,390,249,378,249,378,237" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="380,257,392,257,392,269,380,269,380,257" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="372,241,384,241,384,253,372,253,372,241" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="363,251,375,251,375,263,363,263,363,251" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="381,238,393,238,393,250,381,250,381,238" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="361,266,373,266,373,278,361,278,361,266" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="370,249,382,249,382,261,370,261,370,249" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="364,265,376,265,376,277,364,277,364,265" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="380,252,392,252,392,264,380,264,380,252" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="371,269,383,269,383,281,371,281,371,269" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="380,248,392,248,392,260,380,260,380,248" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="375,263,387,263,387,275,375,275,375,263" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="369,265,381,265,381,277,369,277,369,265" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="380,228,392,228,392,240,380,240,380,228" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="359,256,371,256,371,268,359,268,359,256" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="382,268,394,268,394,280,382,280,382,268" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="371,263,383,263,383,275,371,275,371,263" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="362,262,374,262,374,274,362,274,362,262" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="375,258,387,258,387,270,375,270,375,258" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="375,269,387,269,387,281,375,281,375,269" href="ww0029.html" alt="Tornado Watch #  29">                                               
- <area shape="poly" coords="346,245,358,245,358,257,346,257,346,245" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="352,244,364,244,364,256,352,256,352,244" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="353,223,365,223,365,235,353,235,353,223" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="355,229,367,229,367,241,355,241,355,229" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="351,260,363,260,363,272,351,272,351,260" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="347,255,359,255,359,267,347,267,347,255" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="346,250,358,250,358,262,346,262,346,250" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="347,259,359,259,359,271,347,271,347,259" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="351,251,363,251,363,263,351,263,351,251" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="349,268,361,268,361,280,349,280,349,268" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="346,265,358,265,358,277,346,277,346,265" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="351,255,363,255,363,267,351,267,351,255" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="348,250,360,250,360,262,348,262,348,250" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="372,222,384,222,384,234,372,234,372,222" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="351,267,363,267,363,279,351,279,351,267" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="366,233,378,233,378,245,366,245,366,233" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="371,237,383,237,383,249,371,249,371,237" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="353,243,365,243,365,255,353,255,353,243" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="356,255,368,255,368,267,356,267,356,255" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="373,226,385,226,385,238,373,238,373,226" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="359,225,371,225,371,237,359,237,359,225" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="381,222,393,222,393,234,381,234,381,222" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="374,222,386,222,386,234,374,234,374,222" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="362,224,374,224,374,236,362,236,362,224" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="362,234,374,234,374,246,362,246,362,234" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="358,239,370,239,370,251,358,251,358,239" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="356,249,368,249,368,261,356,261,356,249" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="359,230,371,230,371,242,359,242,359,230" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="379,224,391,224,391,236,379,236,379,224" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="373,229,385,229,385,241,373,241,373,229" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="363,228,375,228,375,240,363,240,363,228" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="369,240,381,240,381,252,369,252,369,240" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="367,222,379,222,379,234,367,234,367,222" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="356,230,368,230,368,242,356,242,356,230" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="355,260,367,260,367,272,355,272,355,260" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="375,233,387,233,387,245,375,245,375,233" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="366,240,378,240,378,252,366,252,366,240" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="371,234,383,234,383,246,371,246,371,234" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="354,237,366,237,366,249,354,249,354,237" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="377,220,389,220,389,232,377,232,377,220" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="361,250,373,250,373,262,361,262,361,250" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="361,239,373,239,373,251,361,251,361,239" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="377,228,389,228,389,240,377,240,377,228" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="369,228,381,228,381,240,369,240,369,228" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="355,264,367,264,367,276,355,276,355,264" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="354,250,366,250,366,262,354,262,354,250" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="359,245,371,245,371,257,359,257,359,245" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="366,245,378,245,378,257,366,257,366,245" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="366,236,378,236,378,248,366,248,366,236" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="356,267,368,267,368,279,356,279,356,267" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="363,222,375,222,375,234,363,234,363,222" href="ww0032.html" alt="Tornado Watch #  32">                                               
- <area shape="poly" coords="352,290,364,290,364,302,352,302,352,290" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="359,286,371,286,371,298,359,298,359,286" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="358,283,370,283,370,295,358,295,358,283" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="362,285,374,285,374,297,362,297,362,285" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="353,280,365,280,365,292,353,292,353,280" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="366,288,378,288,378,300,366,300,366,288" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="359,275,371,275,371,287,359,287,359,275" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="349,277,361,277,361,289,349,289,349,277" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="354,275,366,275,366,287,354,287,354,275" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="354,279,366,279,366,291,354,291,354,279" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="359,280,371,280,371,292,359,292,359,280" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="352,275,364,275,364,287,352,287,352,275" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="351,283,363,283,363,295,351,295,351,283" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="349,287,361,287,361,299,349,299,349,287" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="369,279,381,279,381,291,369,291,369,279" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="369,285,381,285,381,297,369,297,369,285" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="363,291,375,291,375,303,363,303,363,291" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="367,289,379,289,379,301,367,301,367,289" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="373,292,385,292,385,304,373,304,373,292" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="356,287,368,287,368,299,356,299,356,287" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="350,284,362,284,362,296,350,296,350,284" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="359,294,371,294,371,306,359,306,359,294" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="367,274,379,274,379,286,367,286,367,274" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="369,285,381,285,381,297,369,297,369,285" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="362,277,374,277,374,289,362,289,362,277" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="358,271,370,271,370,283,358,283,358,271" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="354,272,366,272,366,284,354,284,354,272" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="366,270,378,270,378,282,366,282,366,270" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="371,274,383,274,383,286,371,286,371,274" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="363,270,375,270,375,282,363,282,363,270" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="347,291,359,291,359,303,347,303,347,291" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="350,296,362,296,362,308,350,308,350,296" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="361,299,373,299,373,311,361,311,361,299" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="372,298,384,298,384,310,372,310,372,298" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="365,283,377,283,377,295,365,295,365,283" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="371,284,383,284,383,296,371,296,371,284" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="374,290,386,290,386,302,374,302,374,290" href="ww0035.html" alt="Tornado Watch #  35">                                               
- <area shape="poly" coords="364,218,376,218,376,230,364,230,364,218" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="373,202,385,202,385,214,373,214,373,202" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="381,204,393,204,393,216,381,216,381,204" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="377,206,389,206,389,218,377,218,377,206" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="376,213,388,213,388,225,376,225,376,213" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="372,209,384,209,384,221,372,221,372,209" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="382,211,394,211,394,223,382,223,382,211" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="367,206,379,206,379,218,367,218,367,206" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="368,217,380,217,380,229,368,229,368,217" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="372,206,384,206,384,218,372,218,372,206" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="373,217,385,217,385,229,373,229,373,217" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="381,216,393,216,393,228,381,228,381,216" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="369,212,381,212,381,224,369,224,369,212" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="379,210,391,210,391,222,379,222,379,210" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="380,202,392,202,392,214,380,214,380,202" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="365,210,377,210,377,222,365,222,365,210" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="378,217,390,217,390,229,378,229,378,217" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="374,212,386,212,386,224,374,224,374,212" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="367,214,379,214,379,226,367,226,367,214" href="ww0031.html" alt="Tornado Watch #  31">                                               
- <area shape="poly" coords="345,284,357,284,357,296,345,296,345,284" href="ww0030.html" alt="Tornado Watch #  30">                                               
- <area shape="poly" coords="342,289,354,289,354,301,342,301,342,289" href="ww0030.html" alt="Tornado Watch #  30">                                               
- <area shape="poly" coords="337,294,349,294,349,306,337,306,337,294" href="ww0030.html" alt="Tornado Watch #  30">                                               
- <area shape="poly" coords="407,247,419,247,419,259,407,259,407,247" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="407,228,419,228,419,240,407,240,407,228" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="417,246,429,246,429,258,417,258,417,246" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="402,253,414,253,414,265,402,265,402,253" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="413,249,425,249,425,261,413,261,413,249" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="405,251,417,251,417,263,405,263,405,251" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="408,231,420,231,420,243,408,243,408,231" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="411,226,423,226,423,238,411,238,411,226" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="411,232,423,232,423,244,411,244,411,232" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="413,237,425,237,425,249,413,249,413,237" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="402,232,414,232,414,244,402,244,402,232" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="410,243,422,243,422,255,410,255,410,243" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="414,241,426,241,426,253,414,253,414,241" href="ww0033.html" alt="Tornado Watch #  33">                                               
- <area shape="poly" coords="317,206,329,206,329,218,317,218,317,206" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="323,205,335,205,335,217,323,217,323,205" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="316,215,328,215,328,227,316,227,316,215" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="320,216,332,216,332,228,320,228,320,216" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="326,216,338,216,338,228,326,228,326,216" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="325,221,337,221,337,233,325,233,325,221" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="334,206,346,206,346,218,334,218,334,206" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="324,229,336,229,336,241,324,241,324,229" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="323,210,335,210,335,222,323,222,323,210" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="327,211,339,211,339,223,327,223,327,211" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="318,230,330,230,330,242,318,242,318,230" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="330,217,342,217,342,229,330,229,330,217" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="320,225,332,225,332,237,320,237,320,225" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="333,211,345,211,345,223,333,223,333,211" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="317,221,329,221,329,233,317,233,317,221" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="317,210,329,210,329,222,317,222,317,210" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="325,222,337,222,337,234,325,234,325,222" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="328,205,340,205,340,217,328,217,328,205" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="328,197,340,197,340,209,328,209,328,197" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="325,193,337,193,337,205,325,205,325,193" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="321,201,333,201,333,213,321,213,321,201" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="315,202,327,202,327,214,315,214,315,202" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="315,199,327,199,327,211,315,211,315,199" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="324,200,336,200,336,212,324,212,324,200" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="329,201,341,201,341,213,329,213,329,201" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="320,196,332,196,332,208,320,208,320,196" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="312,217,324,217,324,229,312,229,312,217" href="ww0034.html" alt="Tornado Watch #  34">                                               
- <area shape="poly" coords="313,212,325,212,325,224,313,224,313,212" href="ww0034.html" alt="Tornado Watch #  34">                                               
+ <area shape="poly" coords="291,253,303,253,303,265,291,265,291,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="287,247,299,247,299,259,287,259,287,247" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="290,258,302,258,302,270,290,270,290,258" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="275,260,287,260,287,272,275,272,275,260" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="289,273,301,273,301,285,289,285,289,273" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="267,285,279,285,279,297,267,297,267,285" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="276,267,288,267,288,279,276,279,276,267" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="287,263,299,263,299,275,287,275,287,263" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="280,258,292,258,292,270,280,270,280,258" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="285,258,297,258,297,270,285,270,285,258" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="276,274,288,274,288,286,276,286,276,274" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="294,269,306,269,306,281,294,281,294,269" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="270,280,282,280,282,292,270,292,270,280" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="286,269,298,269,298,281,286,281,286,269" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="264,280,276,280,276,292,264,292,264,280" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="289,279,301,279,301,291,289,291,289,279" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="270,269,282,269,282,281,270,281,270,269" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="293,262,305,262,305,274,293,274,293,262" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="274,253,286,253,286,265,274,265,274,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="294,276,306,276,306,288,294,288,294,276" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="269,274,281,274,281,286,269,286,269,274" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="280,260,292,260,292,272,280,272,280,260" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="285,253,297,253,297,265,285,265,285,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="280,285,292,285,292,297,280,297,280,285" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="281,281,293,281,293,293,281,293,281,281" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="281,247,293,247,293,259,281,259,281,247" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="293,247,305,247,305,259,293,259,293,247" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="274,278,286,278,286,290,274,290,274,278" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="281,264,293,264,293,276,281,276,281,264" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="273,286,285,286,285,298,273,298,273,286" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="284,276,296,276,296,288,284,288,284,276" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="272,264,284,264,284,276,272,276,272,264" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="280,271,292,271,292,283,280,283,280,271" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="280,253,292,253,292,265,280,265,280,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
+ <area shape="poly" coords="273,229,285,229,285,241,273,241,273,229" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
+ <area shape="poly" coords="273,233,285,233,285,245,273,245,273,233" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
+ <area shape="poly" coords="270,237,282,237,282,249,270,249,270,237" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
+ <area shape="poly" coords="275,239,287,239,287,251,275,251,275,239" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
+ <area shape="poly" coords="270,242,282,242,282,254,270,254,270,242" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
  </map>
-<br/>
+<br />
 <div align="left">
 <table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0035.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0035_radar_thumb.gif" alt="WW0035 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
+<td><a href="/products/watch/ww0045.html">
+<img src="/products/watch/ww0045_radar_thumb.gif" alt="WW0045 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
 <td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0035.html">Tornado Watch #35</a></strong><br/>
-Issued: Mar 17, 2021 at 1940 UTC<br/>
-Updated: Mar 17, 2021 at 2234 UTC<br/>
-Expires: Mar 18, 2021 at 0200 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0035.html">Latest Watch Status Message</a><br/>
+<strong><a href="/products/watch/ww0045.html">Severe Thunderstorm Watch #45</a></strong><br />
+Issued: Mar 22, 2021 at 2305 UTC<br />
+Expires: Mar 23, 2021 at 0500 UTC<br />
+Severe Thunderstorm Watch 45 Status Message has not been issued<br />
 </td></tr></table>
-<hr/>
+<hr />
 </div>
 <div align="left">
 <table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0034.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0034_radar_thumb.gif" alt="WW0034 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
+<td><a href="/products/watch/ww0044.html">
+<img src="/products/watch/ww0044_radar_thumb.gif" alt="WW0044 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
 <td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0034.html">Tornado Watch #34</a></strong><br/>
-Issued: Mar 17, 2021 at 1900 UTC<br/>
-Updated: Mar 17, 2021 at 2246 UTC<br/>
-Expires: Mar 18, 2021 at 0100 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0034.html">Latest Watch Status Message</a><br/>
+<strong><a href="/products/watch/ww0044.html">Severe Thunderstorm Watch #44</a></strong><br />
+Issued: Mar 22, 2021 at 1930 UTC<br />
+Updated: Mar 22, 2021 at 2313 UTC<br />
+Expires: Mar 23, 2021 at 0000 UTC<br />
+<a href="/products/watch/ws0044.html">Latest Watch Status Message</a><br />
 </td></tr></table>
-<hr/>
-</div>
-<div align="left">
-<table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0033.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0033_radar_thumb.gif" alt="WW0033 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
-<td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0033.html">Tornado Watch #33</a></strong><br/>
-Issued: Mar 17, 2021 at 1815 UTC<br/>
-Updated: Mar 17, 2021 at 2244 UTC<br/>
-Expires: Mar 18, 2021 at 0000 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0033.html">Latest Watch Status Message</a><br/>
-</td></tr></table>
-<hr/>
-</div>
-<div align="left">
-<table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0032.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0032_radar_thumb.gif" alt="WW0032 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
-<td><font face="Arial, Helvetica, sans-serif" size="3">
-<span class="highlight">Particularly Dangerous Situation (PDS) </span><strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0032.html">Tornado Watch #32</a></strong><br/>
-Issued: Mar 17, 2021 at 1755 UTC<br/>
-Updated: Mar 17, 2021 at 2233 UTC<br/>
-Expires: Mar 18, 2021 at 0000 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0032.html">Latest Watch Status Message</a><br/>
-</td></tr></table>
-<hr/>
-</div>
-<div align="left">
-<table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0031.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0031_radar_thumb.gif" alt="WW0031 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
-<td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0031.html">Tornado Watch #31</a></strong><br/>
-Issued: Mar 17, 2021 at 1745 UTC<br/>
-Updated: Mar 17, 2021 at 2243 UTC<br/>
-Expires: Mar 18, 2021 at 0000 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0031.html">Latest Watch Status Message</a><br/>
-</td></tr></table>
-<hr/>
-</div>
-<div align="left">
-<table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0030.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0030_radar_thumb.gif" alt="WW0030 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
-<td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0030.html">Tornado Watch #30</a></strong><br/>
-Issued: Mar 17, 2021 at 1655 UTC<br/>
-Updated: Mar 17, 2021 at 2244 UTC<br/>
-Expires: Mar 17, 2021 at 2300 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0030.html">Latest Watch Status Message</a><br/>
-</td></tr></table>
-<hr/>
-</div>
-<div align="left">
-<table><tr>
-<td><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0029.html">
-<img src="/web/20210317225408im_/https://www.spc.noaa.gov/products/watch/ww0029_radar_thumb.gif" alt="WW0029 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
-<td><font face="Arial, Helvetica, sans-serif" size="3">
-<span class="highlight">Particularly Dangerous Situation (PDS) </span><strong><a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ww0029.html">Tornado Watch #29</a></strong><br/>
-Issued: Mar 17, 2021 at 1635 UTC<br/>
-Updated: Mar 17, 2021 at 2224 UTC<br/>
-Expires: Mar 18, 2021 at 0000 UTC<br/>
-<a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/ws0029.html">Latest Watch Status Message</a><br/>
-</td></tr></table>
-<hr/>
+<hr />
 </div>
 
-<br/><br/>
-<b><font face="Arial, Helvetica, sans-serif" size="4">Archived Convective Watches</font></b><br/>
+<br /><br />
+<b><font face="Arial, Helvetica, sans-serif" size="4">Archived Convective Watches</font></b><br />
 To view convective weather watches for a previous day, type in
 the date you wish to retrieve (e.g. 20040529 for May 29, 2004). Data
 available since <b>January 1, 2004</b>.
-<form name="dataReq" method="GET" action="/web/20210317225408/https://www.spc.noaa.gov/cgi-bin-spc/getww.pl">
+<form name="dataReq" method="GET" action="/cgi-bin-spc/getww.pl">
 <input type="text" size="8" name="target" value="20040101" maxlength="8">
 <input type="submit" value="Retrieve Watches">
 </form>
 
 </td></tr>
 </table>
-<br/><br/>
+<br /><br />
 
 <!-- Footers begin here-->
 <center>
   <table cellspacing="2" cellpadding="2" border="0">
     <tr align="center">
-    <td>Weather Topics:<br/>
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/products/watch/">Watches</a>,
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/products/md/">Mesoscale Discussions</a>,
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/products/outlook/">Outlooks</a>,
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/products/fire_wx/">Fire Weather</a>,
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/products/">All Products</a>,
-      <a href="/web/20210317225408/https://www.spc.noaa.gov/misc/feedback.html">Contact Us</a></td>
+    <td>Weather Topics:<br />
+      <a href="/products/watch/">Watches</a>,
+      <a href="/products/md/">Mesoscale Discussions</a>,
+      <a href="/products/outlook/">Outlooks</a>,
+      <a href="/products/fire_wx/">Fire Weather</a>,
+      <a href="/products/">All Products</a>,
+      <a href="/misc/feedback.html">Contact Us</a></td>
     </tr>
   </table>
   <table cellspacing="6" cellpadding="0" width="98%" border="0">
     <tr>
-      <td colspan="3"><hr></td>
+      <td colSpan="3"><hr></td>
     </tr>
     <tr valign="top" align="left">
       <td class="gray">
-        <a href="https://www.noaa.gov/"><span class="gray">NOAA</span></a>&nbsp;/
-        <a href="https://www.nws.noaa.gov/"><span class="gray">National Weather Service</span></a><br/>
-        <a href="https://www.ncep.noaa.gov/"><span class="gray">National Centers for Environmental Prediction</span></a><br/>
-        <a href="/web/20210317225408/https://www.spc.noaa.gov/"><span class="gray">Storm Prediction Center</span></a><br/>
-        120 David L. Boren Blvd.<br/>
-        Norman, OK 73072 U.S.A.<br/>
-        <a href="mailto:spc.feedback@noaa.gov?subject=[SPC web feedback]"><span class="gray">spc.feedback@noaa.gov</span></a><br/>
+        <a href="//www.noaa.gov/"><span class="gray">NOAA</span></a>&nbsp;/
+        <a href="//www.nws.noaa.gov/"><span class="gray">National Weather Service</span></a><br />
+        <a href="//www.ncep.noaa.gov/"><span class="gray">National Centers for Environmental Prediction</span></a><br />
+        <a href="/"><span class="gray">Storm Prediction Center</span></a><br />
+        120 David L. Boren Blvd.<br />
+        Norman, OK 73072 U.S.A.<br />
+        <a href="mailto:spc.feedback@noaa.gov?subject=[SPC web feedback]"><span class="gray">spc.feedback@noaa.gov</span></a><br />
 
 
 Page last modified:
 
 
-March 17, 2021</td>
+March 22, 2021</td>
 
       <td align="left">
-        <a href="https://www.weather.gov/disclaimer">
-          <span class="gray">Disclaimer</span></a><br/>
-        <a href="https://www.cio.noaa.gov/services_programs/info_quality.html">
-          <span class="gray">Information Quality</span></a><br/>
-        <a href="https://www.weather.gov/help">
-          <span class="gray">Help</span></a><br/>
-        <a href="https://www.weather.gov/glossary">
+        <a href="//www.weather.gov/disclaimer">
+          <span class="gray">Disclaimer</span></a><br />
+        <a href="//www.cio.noaa.gov/services_programs/info_quality.html">
+          <span class="gray">Information Quality</span></a><br />
+        <a href="//www.weather.gov/help">
+          <span class="gray">Help</span></a><br />
+        <a href="//www.weather.gov/glossary">
           <span class="gray">Glossary</span></a>
       </td>
       <td align="right">
-        <a href="https://www.weather.gov/privacy">
-          <span class="gray">Privacy Policy</span></a><br/>
-        <a href="https://www.rdc.noaa.gov/%7Efoia/">
-          <span class="gray">Freedom of Information Act (FOIA)</span></a><br/>
-        <a href="https://www.weather.gov/about">
-          <span class="gray">About Us</span></a><br/>
-        <a href="https://www.weather.gov/careers">
+        <a href="//www.weather.gov/privacy">
+          <span class="gray">Privacy Policy</span></a><br />
+        <a href="//www.rdc.noaa.gov/%7Efoia/">
+          <span class="gray">Freedom of Information Act (FOIA)</span></a><br />
+        <a href="//www.weather.gov/about">
+          <span class="gray">About Us</span></a><br />
+        <a href="//www.weather.gov/careers">
           <span class="gray">Career Opportunities</span></a>
       </td>
     </tr>
   </table>
-  <script type="text/javascript" async="true" id="_fed_an_ua_tag" src="https://web.archive.org/web/20210317225408js_/https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&amp;subagency=SPC&amp;pua=UA-52727918-1"></script>
+  <script type="text/javascript" async="true" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=SPC&pua=UA-52727918-1"></script>
 
 <script type="text/javascript">
   if (typeof jQuery == 'undefined') {
@@ -606,7 +362,7 @@ March 17, 2021</td>
   }
 </script>
 
-<script async type="text/javascript" src="/web/20210317225408js_/https://www.spc.noaa.gov/misc/js/nwsexit-spc-min.js"></script>
+<script async type="text/javascript" src="/misc/js/nwsexit-spc-min.js"></script>
 
 </center>
 <!-- Footers end here-->
@@ -616,24 +372,4 @@ March 17, 2021</td>
 </table>
 </body>
 </html>
-<!--
-     FILE ARCHIVED ON 22:54:08 Mar 17, 2021 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 18:13:26 Mar 21, 2021.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  exclusion.robots.policy: 0.407
-  CDXLines.iter: 19.957 (3)
-  RedisCDXSource: 0.732
-  captures_list: 5417.016
-  esindex: 0.015
-  LoadShardBlock: 5355.826 (3)
-  PetaboxLoader3.resolve: 196.512 (3)
-  PetaboxLoader3.datanode: 5116.169 (4)
-  exclusion.robots: 0.428
-  load_resource: 91.271
--->
