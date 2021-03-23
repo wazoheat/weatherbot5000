@@ -4,7 +4,8 @@ import requests
 import re
 import jinja2 as j2
 import argparse
-
+import praw
+import json
 
 
 
@@ -59,7 +60,36 @@ def check_watches(fn):
 
         return watches
 
-#No watches are currently valid
+def post(subr,title,template_file,risk_level,watches):
+    credentials = 'client_secrets.json'
+    with open(credentials) as f:
+        creds = json.load(f)
+
+    reddit = praw.Reddit(client_id=creds['client_id'],
+                         client_secret=creds['client_secret'],
+                         user_agent=creds['user_agent'],
+                         redirect_uri=creds['redirect_uri'],
+                         refresh_token=creds['refresh_token'])
+
+    subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
+
+
+    templateLoader = j2.FileSystemLoader(searchpath="./")
+    templateEnv = j2.Environment(loader=templateLoader)
+    template = templateEnv.get_template(template_file)
+    outputText = template.render(risk_level=risk_level,num_watches=len(watches))
+
+    print(outputText)
+
+#    tm = j2.Template("Hello {{ name }}")
+#    msg = tm.render(name=name)
+#
+#    selftext = '''
+#    I am learning how to use the Reddit API with Python using the PRAW wrapper.
+#    By following the tutorial on https://www.jcchouinard.com/post-on-reddit-api-with-python-praw/
+#    This post was uploaded from my Python Script
+#    '''
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -100,3 +130,5 @@ if __name__ == '__main__':
             if watch.pds:
                 print("PARTICULARLY DANGEROUS SITUATION")
             print("")
+
+    post("wazoheat","Test title","first_jinja_template.md",risk,watches)
