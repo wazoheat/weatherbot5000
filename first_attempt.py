@@ -6,7 +6,7 @@ import jinja2 as j2
 import argparse
 import praw
 import json
-
+import datetime
 
 
 class WatchType:
@@ -17,8 +17,20 @@ class WatchType:
         self.area = area
         self.threats = threats
 
-def check_risk(fn):
+class OutlookType:
+    now=datetime.datetime.now()
+    def __init__(self, outlookday=1, risk="", yyyymmdd=now.strftime("%Y%m%d"), time_utc="", summary_text=""):
+        self.day = outlookday
+        self.risk = risk
+        self.yyyymmdd = yyyymmdd
+        self.time_utc = time_utc
+        self.summary = summary_text
+
+
+def check_risks(fn):
     with open(fn) as fp:
+        outlooks=[]
+        day=1
         while True:
             line = fp.readline()
 
@@ -31,7 +43,10 @@ def check_risk(fn):
                 risk=re.sub(r'^.*?>', '', risk)
                 risk=re.sub(r'<.*?$', '', risk)
                 risk=re.sub(r'\s+', '', risk)
-                return risk
+                outlooks.append(OutlookType(risk=risk,outlookday=day))
+                day+=1
+
+        return outlooks
 
 #        Forecast Risk of Severe Storms: <span class="enhanced">Enhanced Risk</span>
 
@@ -60,7 +75,7 @@ def check_watches(fn):
 
         return watches
 
-def post(subr,title,template_file,risk_level,watches,post):
+def post(subr,title,template_file,outlook,watches,post):
     credentials = 'client_secrets.json'
     with open(credentials) as f:
         creds = json.load(f)
@@ -74,13 +89,17 @@ def post(subr,title,template_file,risk_level,watches,post):
     subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
     reddit.validate_on_submit = True
 
+    now=datetime.datetime.now()
+
+    # Load and substitute jinja template
     templateLoader = j2.FileSystemLoader(searchpath="./")
     templateEnv = j2.Environment(loader=templateLoader)
     template = templateEnv.get_template(template_file)
-    selftext = template.render(risk_level=risk_level,num_watches=len(watches))
+
+    selftext = template.render(risk_level=outlook.risk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],yyyy=outlook.yyyymmdd[:4])
 
     if not title:
-        title="Severe weather outlook for TEST" 
+        title="Severe weather outlook for " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
 
     if post:
         print("Submitting text post to reddit:")
@@ -117,9 +136,9 @@ if __name__ == '__main__':
         fn_watches="watches_debug.txt"
 
 #Check general severe risk for Day 1
-    risk=check_risk(fn_outlooks)
-            
-    print("Day 1 risk level is ",risk)
+    outlooks=check_risks(fn_outlooks)
+
+    print("Day 1 risk level is ",outlooks[0].risk)
 
 #Check for active watches
     watches=check_watches(fn_watches)
@@ -134,4 +153,4 @@ if __name__ == '__main__':
                 print("PARTICULARLY DANGEROUS SITUATION")
             print("")
 
-    post("wazoheat","","jinja_template.md",risk,watches,args.post)
+    post("wazoheat","","jinja_template.md",outlooks[0],watches,args.post)
