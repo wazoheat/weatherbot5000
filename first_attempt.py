@@ -60,7 +60,7 @@ def check_watches(fn):
 
         return watches
 
-def post(subr,title,template_file,risk_level,watches):
+def post(subr,title,template_file,risk_level,watches,post):
     credentials = 'client_secrets.json'
     with open(credentials) as f:
         creds = json.load(f)
@@ -72,28 +72,31 @@ def post(subr,title,template_file,risk_level,watches):
                          refresh_token=creds['refresh_token'])
 
     subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
-
+    reddit.validate_on_submit = True
 
     templateLoader = j2.FileSystemLoader(searchpath="./")
     templateEnv = j2.Environment(loader=templateLoader)
     template = templateEnv.get_template(template_file)
-    outputText = template.render(risk_level=risk_level,num_watches=len(watches))
+    selftext = template.render(risk_level=risk_level,num_watches=len(watches))
 
-    print(outputText)
+    if not title:
+        title="Severe weather outlook for TEST" 
 
-#    tm = j2.Template("Hello {{ name }}")
-#    msg = tm.render(name=name)
-#
-#    selftext = '''
-#    I am learning how to use the Reddit API with Python using the PRAW wrapper.
-#    By following the tutorial on https://www.jcchouinard.com/post-on-reddit-api-with-python-praw/
-#    This post was uploaded from my Python Script
-#    '''
-
+    if post:
+        print("Submitting text post to reddit:")
+    else:
+        print("This is what would be posted to reddit:")
+    print("Subreddit: ",subr)
+    print("Title: ",title)
+    print("Text: ")
+    print(selftext)
+    if post:
+        subreddit.submit(title,selftext=selftext)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--gotime', action='store_true', help='"gotime" should be specified to actively run the script; otherwise it will be run in debug mode on the fixed input files in this directory')
+    parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode (will post to /r/wazoheat) or gotime mode (will post live to /r/weather).')
     args = parser.parse_args()
 
     if args.gotime:
@@ -131,4 +134,4 @@ if __name__ == '__main__':
                 print("PARTICULARLY DANGEROUS SITUATION")
             print("")
 
-    post("wazoheat","Test title","first_jinja_template.md",risk,watches)
+    post("wazoheat","","jinja_template.md",risk,watches,args.post)
