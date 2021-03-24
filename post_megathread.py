@@ -25,6 +25,10 @@ class OutlookType:
         self.yyyymmdd = yyyymmdd
         self.time_utc = time_utc
         self.summary = summary_text
+        if self.risk == "Enhanced":
+            self.arisk = "an " + self.risk
+        else:
+            self.arisk = "a " + self.risk
 
 
 def check_risks(fn):
@@ -96,10 +100,10 @@ def post(subr,title,template_file,outlook,watches,post):
     templateEnv = j2.Environment(loader=templateLoader)
     template = templateEnv.get_template(template_file)
 
-    selftext = template.render(risk_level=outlook.risk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],yyyy=outlook.yyyymmdd[:4])
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],yyyy=outlook.yyyymmdd[:4])
 
     if not title:
-        title="Severe weather outlook for " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
+        title="Day " + str(outlook.day) + " severe weather outlook for " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
 
     if post:
         print("Submitting text post to reddit:")
@@ -139,8 +143,6 @@ if __name__ == '__main__':
 #Check general severe risk for Day 1
     outlooks=check_risks(fn_outlooks)
 
-    print("Day 1 risk level is ",outlooks[0].risk)
-
 #Check for active watches
     watches=check_watches(fn_watches)
 
@@ -154,8 +156,19 @@ if __name__ == '__main__':
                 print("PARTICULARLY DANGEROUS SITUATION")
             print("")
 
-    submission=post("wazoheat","","jinja_template.md",outlooks[0],watches,args.post)
-    if submission:
+    submissions=[]
+    for outlook in outlooks:
+        print("Day " + str(outlook.day) + " outlook: " + outlook.risk)
+        risk_post_levels = {'Enhanced', 'Moderate', 'High'}
+        if outlook.risk in risk_post_levels:
+            submissions.append(post("wazoheat","","jinja_template.md",outlook,watches,args.post))
+
+    if submissions:
         print("Successfully posted to reddit")
-        print("Post ID:",submission.id)
-        print("Post URL:",submission.url)
+        for submission in submissions:
+            print("Post Title:",submission.title)
+            print("Post ID:",submission.id)
+            print("Post URL:",submission.url)
+    
+    
+
