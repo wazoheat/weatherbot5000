@@ -110,7 +110,8 @@ def post(subr,title,template_file,outlook,watches,post):
     print("Text: ")
     print(selftext)
     if post:
-        subreddit.submit(title,selftext=selftext)
+        submission=subreddit.submit(title,selftext=selftext)
+        return submission
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -153,4 +154,8 @@ if __name__ == '__main__':
                 print("PARTICULARLY DANGEROUS SITUATION")
             print("")
 
-    post("wazoheat","","jinja_template.md",outlooks[0],watches,args.post)
+    submission=post("wazoheat","","jinja_template.md",outlooks[0],watches,args.post)
+    if submission:
+        print("Successfully posted to reddit")
+        print("Post ID:",submission.id)
+        print("Post URL:",submission.url)
