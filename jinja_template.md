@@ -31,3 +31,5 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
 {{live_updates}}
 
 {{other_notes}}
+
+**I am a bot built and run by /u/wazoheat; if something looks wrong it's his fault, yell at him.**

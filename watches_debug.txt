@@ -6,7 +6,7 @@
   <meta name="DC.description" content="SPC Current Tornado/Severe Thunderstorm Watches Page" />
   <meta name="DC.subject" content="Storm Prediction Center forecast products: tornado/severe thunderstorm watches" />
 
-  <meta name="DC.date.reviewed" scheme="ISO8601" content="2021-03-22" />
+  <meta name="DC.date.reviewed" scheme="ISO8601" content="2021-03-24" />
   <meta name="DC.date.created" scheme="ISO8601" content="2001-01-01" />
   <meta name="DC.format" content="text/html; charset=iso-8859-1" />
 
@@ -214,73 +214,86 @@
 <!-- Contents below-->
 <table width="586" border="0" cellpadding="0" cellspacing="0">
 <tr><td><b><font face="Arial, Helvetica, sans-serif" size="4">Current Convective Watches</font></b>&nbsp;(View <a href="http://www.nws.noaa.gov/cgi-bin/nwsexit.pl?url=http://www.youtube.com/watch?v=x3V3HZBs1Y4" target="YouTube Clip">What is a Watch?</a> clip)<br />
-<font face="Arial, Helvetica, sans-serif" size="1">Updated:&nbsp;&nbsp;Mon Mar 22 23:30:40 UTC 2021</font><br /><br />
+<font face="Arial, Helvetica, sans-serif" size="1">Updated:&nbsp;&nbsp;Wed Mar 24 23:57:07 UTC 2021</font><br /><br />
 <img src="validww.png" alt="Valid WW Image" usemap="#wwimgmap">
 <img src="wwlegend.png" alt="WW Graphics Legend">
  <map name="wwimgmap">
- <area shape="poly" coords="291,253,303,253,303,265,291,265,291,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="287,247,299,247,299,259,287,259,287,247" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="290,258,302,258,302,270,290,270,290,258" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="275,260,287,260,287,272,275,272,275,260" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="289,273,301,273,301,285,289,285,289,273" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="267,285,279,285,279,297,267,297,267,285" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="276,267,288,267,288,279,276,279,276,267" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="287,263,299,263,299,275,287,275,287,263" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="280,258,292,258,292,270,280,270,280,258" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="285,258,297,258,297,270,285,270,285,258" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="276,274,288,274,288,286,276,286,276,274" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="294,269,306,269,306,281,294,281,294,269" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="270,280,282,280,282,292,270,292,270,280" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="286,269,298,269,298,281,286,281,286,269" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="264,280,276,280,276,292,264,292,264,280" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="289,279,301,279,301,291,289,291,289,279" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="270,269,282,269,282,281,270,281,270,269" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="293,262,305,262,305,274,293,274,293,262" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="274,253,286,253,286,265,274,265,274,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="294,276,306,276,306,288,294,288,294,276" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="269,274,281,274,281,286,269,286,269,274" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="280,260,292,260,292,272,280,272,280,260" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="285,253,297,253,297,265,285,265,285,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="280,285,292,285,292,297,280,297,280,285" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="281,281,293,281,293,293,281,293,281,281" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="281,247,293,247,293,259,281,259,281,247" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="293,247,305,247,305,259,293,259,293,247" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="274,278,286,278,286,290,274,290,274,278" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="281,264,293,264,293,276,281,276,281,264" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="273,286,285,286,285,298,273,298,273,286" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="284,276,296,276,296,288,284,288,284,276" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="272,264,284,264,284,276,272,276,272,264" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="280,271,292,271,292,283,280,283,280,271" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="280,253,292,253,292,265,280,265,280,253" href="ww0045.html" alt="Severe Thunderstorm Watch #  45">                                   
- <area shape="poly" coords="273,229,285,229,285,241,273,241,273,229" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
- <area shape="poly" coords="273,233,285,233,285,245,273,245,273,233" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
- <area shape="poly" coords="270,237,282,237,282,249,270,249,270,237" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
- <area shape="poly" coords="275,239,287,239,287,251,275,251,275,239" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
- <area shape="poly" coords="270,242,282,242,282,254,270,254,270,242" href="ww0044.html" alt="Severe Thunderstorm Watch #  44">                                   
+ <area shape="poly" coords="290,258,302,258,302,270,290,270,290,258" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="275,260,287,260,287,272,275,272,275,260" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="289,273,301,273,301,285,289,285,289,273" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="276,267,288,267,288,279,276,279,276,267" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="302,261,314,261,314,273,302,273,302,261" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="287,263,299,263,299,275,287,275,287,263" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="280,258,292,258,292,270,280,270,280,258" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="285,258,297,258,297,270,285,270,285,258" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="297,255,309,255,309,267,297,267,297,255" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="258,283,270,283,270,295,258,295,258,283" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="276,274,288,274,288,286,276,286,276,274" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="270,280,282,280,282,292,270,292,270,280" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="263,274,275,274,275,286,263,286,263,274" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="286,269,298,269,298,281,286,281,286,269" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="264,280,276,280,276,292,264,292,264,280" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="257,277,269,277,269,289,257,289,257,277" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="270,269,282,269,282,281,270,281,270,269" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="293,262,305,262,305,274,293,274,293,262" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="269,274,281,274,281,286,269,286,269,274" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="280,260,292,260,292,272,280,272,280,260" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="301,255,313,255,313,267,301,267,301,255" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="274,278,286,278,286,290,274,290,274,278" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="266,266,278,266,278,278,266,278,266,266" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="281,264,293,264,293,276,281,276,281,264" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="284,276,296,276,296,288,284,288,284,276" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="272,264,284,264,284,276,272,276,272,264" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="280,271,292,271,292,283,280,283,280,271" href="ww0047.html" alt="Tornado Watch #  47">                                               
+ <area shape="poly" coords="291,253,303,253,303,265,291,265,291,253" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="303,245,315,245,315,257,303,257,303,245" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="287,247,299,247,299,259,287,259,287,247" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="298,242,310,242,310,254,298,254,298,242" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="309,248,321,248,321,260,309,260,309,248" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="292,242,304,242,304,254,292,254,292,242" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="312,256,324,256,324,268,312,268,312,256" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="304,248,316,248,316,260,304,260,304,248" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="298,248,310,248,310,260,298,260,298,248" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="303,241,315,241,315,253,303,253,303,241" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="313,248,325,248,325,260,313,260,313,248" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="301,251,313,251,313,263,301,263,301,251" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="310,242,322,242,322,254,310,254,310,242" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="296,252,308,252,308,264,296,264,296,252" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="308,258,320,258,320,270,308,270,308,258" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="285,253,297,253,297,265,285,265,285,253" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="310,247,322,247,322,259,310,259,310,247" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="311,253,323,253,323,265,311,265,311,253" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="281,247,293,247,293,259,281,259,281,247" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="305,252,317,252,317,264,305,264,305,252" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="293,247,305,247,305,259,293,259,293,247" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="310,249,322,249,322,261,310,261,310,249" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="287,242,299,242,299,254,287,254,287,242" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
+ <area shape="poly" coords="280,253,292,253,292,265,280,265,280,253" href="ww0048.html" alt="Severe Thunderstorm Watch #  48">                                   
  </map>
 <br />
 <div align="left">
 <table><tr>
-<td><a href="/products/watch/ww0045.html">
-<img src="/products/watch/ww0045_radar_thumb.gif" alt="WW0045 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
+<td><a href="/products/watch/ww0048.html">
+<img src="/products/watch/ww0048_radar_thumb.gif" alt="WW0048 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
 <td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/products/watch/ww0045.html">Severe Thunderstorm Watch #45</a></strong><br />
-Issued: Mar 22, 2021 at 2305 UTC<br />
-Expires: Mar 23, 2021 at 0500 UTC<br />
-Severe Thunderstorm Watch 45 Status Message has not been issued<br />
+<strong><a href="/products/watch/ww0048.html">Severe Thunderstorm Watch #48</a></strong><br />
+Issued: Mar 24, 2021 at 2200 UTC<br />
+Updated: Mar 24, 2021 at 2353 UTC<br />
+Expires: Mar 25, 2021 at 0300 UTC<br />
+<a href="/products/watch/ws0048.html">Latest Watch Status Message</a><br />
 </td></tr></table>
 <hr />
 </div>
 <div align="left">
 <table><tr>
-<td><a href="/products/watch/ww0044.html">
-<img src="/products/watch/ww0044_radar_thumb.gif" alt="WW0044 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
+<td><a href="/products/watch/ww0047.html">
+<img src="/products/watch/ww0047_radar_thumb.gif" alt="WW0047 RADAR Thumbnail Image" border="1" width="190" height="150"></a></td>
 <td><font face="Arial, Helvetica, sans-serif" size="3">
-<strong><a href="/products/watch/ww0044.html">Severe Thunderstorm Watch #44</a></strong><br />
-Issued: Mar 22, 2021 at 1930 UTC<br />
-Updated: Mar 22, 2021 at 2313 UTC<br />
-Expires: Mar 23, 2021 at 0000 UTC<br />
-<a href="/products/watch/ws0044.html">Latest Watch Status Message</a><br />
+<strong><a href="/products/watch/ww0047.html">Tornado Watch #47</a></strong><br />
+Issued: Mar 24, 2021 at 2140 UTC<br />
+Updated: Mar 24, 2021 at 2333 UTC<br />
+Expires: Mar 25, 2021 at 0300 UTC<br />
+<a href="/products/watch/ws0047.html">Latest Watch Status Message</a><br />
 </td></tr></table>
 <hr />
 </div>
@@ -330,7 +343,7 @@ available since <b>January 1, 2004</b>.
 Page last modified:
 
 
-March 22, 2021</td>
+March 24, 2021</td>
 
       <td align="left">
         <a href="//www.weather.gov/disclaimer">
