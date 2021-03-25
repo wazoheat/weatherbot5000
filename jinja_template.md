@@ -23,6 +23,7 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
 **Live updates**
 
 * [Storm Prediction Center on Twitter](https://twitter.com/NWSSPC)
+* [Live stream of this thread](http://reddit-stream.com/comments/{{post_id}}/)
 {{live_updates}}
 
 {{other_notes}}

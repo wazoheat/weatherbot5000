@@ -226,9 +226,9 @@ def post(subr,title,template_file,outlook,watches,post,update):
         watches_text.append(";\n".join(watch.threats))
 
     if not watches_text:
-        watches_text="* *None in effect*"
+        watches_text=[ "* *None in effect*" ]
 
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],mm=outlook.yyyymmdd[-4:-2],yyyy=outlook.yyyymmdd[:4],yyyymmdd=outlook.yyyymmdd,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary)
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],mm=outlook.yyyymmdd[-4:-2],yyyy=outlook.yyyymmdd[:4],yyyymmdd=outlook.yyyymmdd,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update)
 
     if not title:
         title="[Megathread] Southeastern US Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
