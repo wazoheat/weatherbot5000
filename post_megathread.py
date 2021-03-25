@@ -218,12 +218,13 @@ def post(subr,title,template_file,outlook,watches,post,update):
     watches_text=[]
     for watch in watches:
         if watch.pds:
-            watches_text.append(''.join("* [**Particularly Dangerous Situation (PDS)** " + watch.type + " Watch " + str(watch.no) + "](" + watch.url + "): portions of"))
+            watches_text.append(''.join("[**Particularly Dangerous Situation (PDS)** " + watch.type + " Watch " + str(watch.no) + "](" + watch.url + "): portions of"))
         else:
-            watches_text.append(''.join("* [" + watch.type + " Watch " + str(watch.no) + "](" + watch.url + "): portions of"))
+            watches_text.append(''.join("[" + watch.type + " Watch " + str(watch.no) + "](" + watch.url + "): portions of"))
         watches_text.append(";\n".join(watch.area))
         watches_text.append("\nPrimary threats include...")
         watches_text.append(";\n".join(watch.threats))
+        watches_text.append("\n----")
 
     if not watches_text:
         watches_text=[ "* *None in effect*" ]
