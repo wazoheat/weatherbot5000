@@ -16,21 +16,26 @@ class WatchType:
         self.pds = pds
         self.area = kwargs.get('area', [])
         self.threats = kwargs.get('threats', [])
-        self.url = 'https://www.spc.noaa.gov/products/watch/ww' + self.no.zfill(4) + '.html' 
+        self.url = 'https://www.spc.noaa.gov/products/watch/ww' + self.no.zfill(4) + '.html'
+        self.easyurl = ""
 
 class OutlookType:
     now=datetime.datetime.now()
-    def __init__(self, outlookday=1, risk="", yyyymmdd=now.strftime("%Y%m%d"), time_utc="", summary_text=""):
+    now_utc=datetime.datetime.utcnow()
+    def __init__(self, outlookday=1, risk="", yyyymmdd=now.strftime("%Y%m%d"), yyyymmdd_utc=now_utc.strftime("%Y%m%d"), time_utc="", summary_text="", **kwargs):
         self.day = outlookday
         self.risk = risk
         self.yyyymmdd = yyyymmdd
+        self.yyyymmdd_utc = yyyymmdd_utc
         self.time_utc = time_utc
         self.summary = summary_text
         self.url = "https://www.spc.noaa.gov/products/outlook/day" + str(self.day) + "otlk.html"
+        self.easyurl = ""
         if self.risk == "Enhanced":
             self.arisk = "an " + self.risk
         else:
             self.arisk = "a " + self.risk
+        self.prev = kwargs.get('prev', [])
 
 
 def check_risks(fn):
@@ -43,18 +48,63 @@ def check_risks(fn):
             if not line:
                 break
 
+            times=["2000","1630","1300","1200","0100"]
             if "Forecast Risk of Severe Storms:" in line:
                 risk=line
                 risk=risk.replace("Risk","")
                 risk=re.sub(r'^.*?>', '', risk)
                 risk=re.sub(r'<.*?$', '', risk)
                 risk=re.sub(r'\s+', '', risk)
-                outlooks.append(OutlookType(risk=risk,outlookday=day))
-                day+=1
+                outlooks.append(OutlookType(risk=risk,outlookday=day)) 
+                # If 0100z outlook does not exist, then we need to look at yesterday
+                # Yes I am aware of how ugly this logic is...
+                testurl="https://www.spc.noaa.gov/products/outlook/archive/" + outlooks[-1].yyyymmdd_utc[:4] + "/day" + str(day) + "otlk_" + outlooks[-1].yyyymmdd_utc + "_0100.html"
+                res = requests.get(testurl)
+                if res.status_code == 404:
+                    now_utc=datetime.datetime.utcnow()
+                    yesterday_utc=now_utc - datetime.timedelta(days = 1)
+                    outlooks[-1].yyyymmdd_utc=yesterday_utc.strftime("%Y%m%d")
+
+                for time in times:
+                    testurl="https://www.spc.noaa.gov/products/outlook/archive/" + outlooks[-1].yyyymmdd_utc[:4] + "/day" + str(day) + "otlk_" + outlooks[-1].yyyymmdd_utc + "_" + time + ".html"
+                    res = requests.get(testurl)
+                    if res.status_code == 200:
+                        outlooks[-1].easyurl=testurl
+                        break
+#                day+=1
+                break
 
         return outlooks
 
 def populate_risks(outlooks):
+    for outlook in outlooks:
+
+        fn_outlook="day" + str(outlook.day) + "outlook.txt"
+        if args.gotime:
+            res = requests.get(outlook.easyurl)
+            if res.status_code != 200:
+                print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
+            print(res.text, file=open(fn_outlook, 'w'))
+        else:
+            print('Running in debug mode; specify argument "--gotime" to run the real deal')
+        with open(fn_outlook) as fp:
+            while True:
+                line = fp.readline()
+
+                if not line:
+                    break
+
+                if "...SUMMARY..." in line:
+                    line=fp.readline()
+                    while line.strip():
+                        outlook.summary[-1] = outlook.summary[-1] + line.strip()
+                        line=fp.readline()
+#                if '<tr><td align="center" class="zz" nowrap>' in line:
+#                    utc=line
+#                    utc=utc.replace("Risk","")
+#                    utc=utc.sub(r'^.*?>', '', risk)
+#                    outlook.time_utc=utc
+
     return outlooks
 
 def check_watches(fn):
@@ -83,11 +133,9 @@ def check_watches(fn):
         return watches
 
 def populate_watches(watches):
-    print(len(watches))
     for watch in watches:
 
         fn_watch="watch" + watch.no.zfill(4) + ".txt"
-        print("Opening ",fn_watch)
         if args.gotime:
             res = requests.get(watch.url)
             if res.status_code != 200:
@@ -107,9 +155,9 @@ def populate_watches(watches):
                 if "Watch for portions of" in line and not watch.area:
                     line=fp.readline()
                     while line.strip(): 
-                        # Add a semicolon unless the line is indented, indicating it continues previous area line
+                        # If the line is indented, this indicates it continues previous area line
                         if re.search(r'^      ', line ):
-                            watch.area[-1] = watch.area[-1] + line.strip()
+                            watch.area[-1] = watch.area[-1] + " " + line.strip()
                         else:
                             watch.area.append(line.strip())
                         line=fp.readline()
@@ -124,17 +172,9 @@ def populate_watches(watches):
                             watch.threats.append(line.strip())
                         line=fp.readline()
 
-        if watch.pds:
-            print("* [**Particularly Dangerous Situation (PDS)** " + watch.type + " Watch " + watch.no + "](" + watch.url + "): portions of")
-        else:
-            print("* [" + watch.type + " Watch " + watch.no + "](" + watch.url + "): portions of")
-        print(watch.area)
-        print("\nPrimary threats include...")
-        print(watch.threats)
-
     return watches
 
-def post(subr,title,template_file,outlook,watches,post):
+def post(subr,title,template_file,outlook,watches,post,update):
     credentials = 'client_secrets.json'
     with open(credentials) as f:
         creds = json.load(f)
@@ -159,18 +199,17 @@ def post(subr,title,template_file,outlook,watches,post):
     watches_text=[]
     for watch in watches:
         if watch.pds:
-            watches_text.append("* [**Particularly Dangerous Situation (PDS)** " + watch.type + " Watch " + watch.no + "](" + watch.url + "): portions of")
+            watches_text.append(''.join("* [**Particularly Dangerous Situation (PDS)** " + watch.type + " Watch " + str(watch.no) + "](" + watch.url + "): portions of"))
         else:
-            watches_text.append("* [" + watch.type + " Watch " + watch.no + "](" + watch.url + "): portions of")
-        watches_text.append(watch.area)
+            watches_text.append(''.join("* [" + watch.type + " Watch " + str(watch.no) + "](" + watch.url + "): portions of"))
+        watches_text.append(";\n".join(watch.area))
         watches_text.append("\nPrimary threats include...")
-        watches_text.append(watch.threats)
+        watches_text.append(";\n".join(watch.threats))
 
     if not watches_text:
         watches_text="* *None in effect*"
 
-
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],yyyy=outlook.yyyymmdd[:4],watches_text=watches_text)
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],yyyy=outlook.yyyymmdd[:4],watches_text="\n".join(watches_text))
 
     if not title:
         title="Day " + str(outlook.day) + " severe weather outlook for " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
@@ -184,13 +223,20 @@ def post(subr,title,template_file,outlook,watches,post):
     print("Text: ")
     print(selftext)
     if post:
-        submission=subreddit.submit(title,selftext=selftext)
+        if update:
+            submission = reddit.submission(id=update)
+            submission = submission.edit(selftext)
+        else:
+            submission=subreddit.submit(title,selftext=selftext)
+
         return submission
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--gotime', action='store_true', help='"gotime" should be specified to actively run the script; otherwise it will be run in debug mode on the fixed input files in this directory')
     parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode (will post to /r/wazoheat) or gotime mode (will post live to /r/weather).')
+    parser.add_argument('--update', help='"update" should provide the base-32 id of an existing post to update; if --post is not specified, this argument does nothing')
+
     args = parser.parse_args()
 
     if args.gotime:
@@ -210,6 +256,10 @@ if __name__ == '__main__':
         fn_outlooks="outlooks_debug.txt"
         fn_watches="watches_debug.txt"
 
+#    res = requests.get('https://www.spc.noaa.gov/products/outlook/archive/2021/day1otlk_20210325_1200.html')
+#    print(res.status_code)
+#    exit()
+
 #Check general severe risk for Day 1
     outlooks=check_risks(fn_outlooks)
 
@@ -218,32 +268,33 @@ if __name__ == '__main__':
 
     if watches:
         watches=populate_watches(watches)
-        print("Watches in effect:")
-        for watch in watches:
-            print(watch.type + " Watch " + watch.no)
-            if watch.pds:
-                print("PARTICULARLY DANGEROUS SITUATION")
-            print("")
+#        print("Watches in effect:")
+#        for watch in watches:
+#            print(watch.type + " Watch " + watch.no)
+#            if watch.pds:
+#                print("PARTICULARLY DANGEROUS SITUATION")
+#            print("")
     else:
         print("No watches in effect")
 
     submissions=[]
-    for outlook in outlooks:
-        print("Day " + str(outlook.day) + " outlook: " + outlook.risk)
-        risk_post_levels = {'Enhanced', 'Moderate', 'High'}
-        if outlook.risk in risk_post_levels:
-            fn_outlook="day" + str(outlook.day) + "outlook.txt"
-            if args.gotime:
-                res = requests.get(outlook.url)
-                if res.status_code != 200:
-                    print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
-                print(res.text, file=open(fn_outlook, 'w'))
-                if res.status_code != 200:
-                    print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
+#    for outlook in outlooks:
+#        print("Day " + str(outlook.day) + " outlook: " + outlook.risk)
+#        risk_post_levels = {'Enhanced', 'Moderate', 'High'}
+#        if outlook.risk in risk_post_levels:
+#            fn_outlook="day" + str(outlook.day) + "outlook.txt"
+#            if args.gotime:
+#                res = requests.get(outlook.url)
+#                if res.status_code != 200:
+#                    print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
+#                print(res.text, file=open(fn_outlook, 'w'))
+#                if res.status_code != 200:
+#                    print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
+#
+#            submissions.append(post("wazoheat","","jinja_template.md",outlook,watches,args.post))
 
-            submissions.append(post("wazoheat","","jinja_template.md",outlook,watches,args.post))
-
-    if submissions:
+    submissions.append(post("wazoheat","","jinja_template.md",outlooks[0],watches,args.post,args.update))
+    if submissions[0] is not None:
         print("Successfully posted to reddit")
         for submission in submissions:
             print("Post Title:",submission.title)
