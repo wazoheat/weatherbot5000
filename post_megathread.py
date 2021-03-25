@@ -7,7 +7,7 @@ import argparse
 import praw
 import json
 import datetime
-
+import os
 
 class WatchType:
     def __init__(self, no=0, type="Severe Thunderstorm", pds=False, **kwargs):
@@ -22,12 +22,14 @@ class WatchType:
 class OutlookType:
     now=datetime.datetime.now()
     now_utc=datetime.datetime.utcnow()
-    def __init__(self, outlookday=1, risk="", yyyymmdd=now.strftime("%Y%m%d"), yyyymmdd_utc=now_utc.strftime("%Y%m%d"), time_utc="", summary_text="", **kwargs):
+    def __init__(self, outlookday=1, risk="", valid="", yyyymmdd=now.strftime("%Y%m%d"), yyyymmdd_utc=now_utc.strftime("%Y%m%d"), time_utc="", time_cdt="", summary_text="", **kwargs):
         self.day = outlookday
         self.risk = risk
+        self.valid = valid
         self.yyyymmdd = yyyymmdd
         self.yyyymmdd_utc = yyyymmdd_utc
         self.time_utc = time_utc
+        self.time_cdt = time_cdt
         self.summary = summary_text
         self.url = "https://www.spc.noaa.gov/products/outlook/day" + str(self.day) + "otlk.html"
         self.easyurl = ""
@@ -64,13 +66,19 @@ def check_risks(fn):
                     now_utc=datetime.datetime.utcnow()
                     yesterday_utc=now_utc - datetime.timedelta(days = 1)
                     outlooks[-1].yyyymmdd_utc=yesterday_utc.strftime("%Y%m%d")
-
+                yyyy=outlooks[-1].yyyymmdd_utc[:4]
+                mm=outlooks[-1].yyyymmdd_utc[4:6]
+                dd=outlooks[-1].yyyymmdd_utc[6:]
                 for time in times:
-                    testurl="https://www.spc.noaa.gov/products/outlook/archive/" + outlooks[-1].yyyymmdd_utc[:4] + "/day" + str(day) + "otlk_" + outlooks[-1].yyyymmdd_utc + "_" + time + ".html"
+                    testurl="https://www.spc.noaa.gov/products/outlook/archive/" + yyyy + "/day" + str(day) + "otlk_" + outlooks[-1].yyyymmdd_utc + "_" + time + ".html"
                     res = requests.get(testurl)
                     if res.status_code == 200:
                         outlooks[-1].easyurl=testurl
+                        outlooks[-1].valid=time
                         break
+                date_time_str = outlooks[-1].yyyymmdd_utc + outlooks[-1].valid + " +0000"
+                outlooks[-1].time_utc = datetime.datetime.strptime(date_time_str, '%Y%m%d%H%M %z')
+                outlooks[-1].time_cdt=outlooks[-1].time_utc - datetime.timedelta (hours=5)
 #                day+=1
                 break
 
@@ -96,8 +104,10 @@ def populate_risks(outlooks):
 
                 if "...SUMMARY..." in line:
                     line=fp.readline()
+                    outlook.summary=line.strip()
+                    line=fp.readline()
                     while line.strip():
-                        outlook.summary[-1] = outlook.summary[-1] + line.strip()
+                        outlook.summary = outlook.summary + " " + line.strip()
                         line=fp.readline()
 #                if '<tr><td align="center" class="zz" nowrap>' in line:
 #                    utc=line
@@ -175,6 +185,8 @@ def populate_watches(watches):
     return watches
 
 def post(subr,title,template_file,outlook,watches,post,update):
+
+    #Open credentials file and populate the praw object and various settings for posting to reddit
     credentials = 'client_secrets.json'
     with open(credentials) as f:
         creds = json.load(f)
@@ -187,6 +199,13 @@ def post(subr,title,template_file,outlook,watches,post,update):
 
     subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
     reddit.validate_on_submit = True
+
+    # Check for 'other_notes.txt', the file that will be appended as-is near the end of the post
+
+    other_notes=''
+    if os.path.isfile('other_notes.txt'):
+        with open('other_notes.txt', "r") as text_file:
+            other_notes = text_file.read()
 
     now=datetime.datetime.now()
 
@@ -209,10 +228,10 @@ def post(subr,title,template_file,outlook,watches,post,update):
     if not watches_text:
         watches_text="* *None in effect*"
 
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],yyyy=outlook.yyyymmdd[:4],watches_text="\n".join(watches_text))
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],mm=outlook.yyyymmdd[-4:-2],yyyy=outlook.yyyymmdd[:4],yyyymmdd=outlook.yyyymmdd,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary)
 
     if not title:
-        title="Day " + str(outlook.day) + " severe weather outlook for " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
+        title="[Megathread] Southeastern US Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
 
     if post:
         print("Submitting text post to reddit:")
@@ -256,10 +275,6 @@ if __name__ == '__main__':
         fn_outlooks="outlooks_debug.txt"
         fn_watches="watches_debug.txt"
 
-#    res = requests.get('https://www.spc.noaa.gov/products/outlook/archive/2021/day1otlk_20210325_1200.html')
-#    print(res.status_code)
-#    exit()
-
 #Check general severe risk for Day 1
     outlooks=check_risks(fn_outlooks)
 
@@ -293,7 +308,15 @@ if __name__ == '__main__':
 #
 #            submissions.append(post("wazoheat","","jinja_template.md",outlook,watches,args.post))
 
-    submissions.append(post("wazoheat","","jinja_template.md",outlooks[0],watches,args.post,args.update))
+    if outlooks:
+        outlooks=populate_risks(outlooks)
+
+    sub="wazoheat"
+#    if args.gotime:
+#        sub="weather"
+#    else:
+#        sub="wazoheat"
+    submissions.append(post(sub,"","jinja_template.md",outlooks[0],watches,args.post,args.update))
     if submissions[0] is not None:
         print("Successfully posted to reddit")
         for submission in submissions:

@@ -1,4 +1,4 @@
-The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for {{day_of_week}}, {{month}} {{dd}}, {{yyyy}}. As of {{time_utc}} UTC ({{time_cdt}}, Central Daylight Time) the forecast includes this summary:
+The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for {{day_of_week}}, {{month}} {{dd}}, {{yyyy}}. As of {{hhmm}} UTC ({{time_cdt}}, Central Daylight Time) the forecast includes this summary:
 
 >{{summary_text}}
 
@@ -10,7 +10,7 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
  * Previous Versions: [0600 UTC](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1otlk_{{yyyymmdd}}_1200.html) {{previous_outlooks}}
 
 
-**Latest risk maps (as of {{time_utc}} UTC, {{time_cdt}} CDT):**
+**Latest risk maps (as of {{hhmm}} UTC, {{time_cdt}} CDT):**
 
 * [All severe weather](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1otlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_prt.gif) — [Tornadoes](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1probotlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_torn_prt.gif) — [Straight-line wind](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1probotlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_wind_prt.gif) — [Hail](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1probotlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_hail_prt.gif)
 
@@ -20,14 +20,9 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
 
 # Alternate links for further information
 
-**Live Streams**
-
-{{live_streams}}
-
 **Live updates**
 
 * [Storm Prediction Center on Twitter](https://twitter.com/NWSSPC)
-* [Live stream of this thread](http://reddit-stream.com/comments//)
 {{live_updates}}
 
 {{other_notes}}
