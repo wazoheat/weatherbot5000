@@ -5,7 +5,7 @@
   <meta name="DC.title" content="Storm Prediction Center Tornado/Severe Thunderstorm Watch Page" />
   <meta name="DC.description" content="SPC Tornado/Severe Thunderstorm Watch Page" />
   <meta name="DC.subject" content="Storm Prediction Center forecast products: tornado/severe thunderstorm watches" />
-  <meta name="DC.date.reviewed" scheme="ISO8601" content="2021-03-24" />
+  <meta name="DC.date.reviewed" scheme="ISO8601" content="2021-03-25" />
   <meta name="DC.date.created" scheme="ISO8601" content="2001-01-01" />
   <meta name="DC.format" content="text/html; charset=iso-8859-1" />
 
@@ -690,6 +690,88 @@ The actual watch is depicted by the shaded areas.</font><br />
 </pre>
       <p><b>Watch 47 Status Report Messages:</b></p>
 <pre>
+STATUS REPORT #5 ON <a href="ww0047.html">WW 47</a>
+
+VALID 250140Z - 250240Z
+
+THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
+
+FOR ADDITIONAL INFORMATION SEE <a href="../md/md0245.html">MESOSCALE DISCUSSION 245</a>
+
+..COOK..03/25/21
+
+ATTN...WFO...FWD...SJT...EWX...
+
+&&
+
+STATUS REPORT FOR WT 47 
+
+SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
+
+TXC027-035-049-053-093-099-139-143-145-193-213-217-221-251-257-
+267-281-299-307-309-319-327-333-349-411-425-467-250240-
+
+TX 
+.    TEXAS COUNTIES INCLUDED ARE
+
+BELL		     BOSQUE		 BROWN		     
+BURNET		     COMANCHE		 CORYELL	     
+ELLIS		     ERATH		 FALLS		     
+HAMILTON	     HENDERSON		 HILL		     
+HOOD		     JOHNSON		 KAUFMAN	     
+KIMBLE		     LAMPASAS		 LLANO		     
+MCCULLOCH	     MCLENNAN		 MASON		     
+MENARD		     MILLS		 NAVARRO	     
+SAN SABA	     SOMERVELL		 VAN ZANDT	     
+$$
+
+
+THE WATCH STATUS MESSAGE IS FOR GUIDANCE PURPOSES ONLY.  PLEASE
+REFER TO WATCH COUNTY NOTIFICATION STATEMENTS FOR OFFICIAL
+INFORMATION ON COUNTIES...INDEPENDENT CITIES AND MARINE ZONES
+CLEARED FROM SEVERE THUNDERSTORM AND TORNADO WATCHES.
+$$
+
+STATUS REPORT #4 ON <a href="ww0047.html">WW 47</a>
+
+VALID 250040Z - 250140Z
+
+THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
+
+..COOK..03/25/21
+
+ATTN...WFO...FWD...SJT...EWX...
+
+&&
+
+STATUS REPORT FOR WT 47 
+
+SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
+
+TXC027-035-049-053-093-099-139-143-145-193-213-217-221-251-257-
+267-281-299-307-309-319-327-333-349-411-425-467-250140-
+
+TX 
+.    TEXAS COUNTIES INCLUDED ARE
+
+BELL		     BOSQUE		 BROWN		     
+BURNET		     COMANCHE		 CORYELL	     
+ELLIS		     ERATH		 FALLS		     
+HAMILTON	     HENDERSON		 HILL		     
+HOOD		     JOHNSON		 KAUFMAN	     
+KIMBLE		     LAMPASAS		 LLANO		     
+MCCULLOCH	     MCLENNAN		 MASON		     
+MENARD		     MILLS		 NAVARRO	     
+SAN SABA	     SOMERVELL		 VAN ZANDT	     
+$$
+
+
+THE WATCH STATUS MESSAGE IS FOR GUIDANCE PURPOSES ONLY.  PLEASE
+REFER TO WATCH COUNTY NOTIFICATION STATEMENTS FOR OFFICIAL
+INFORMATION ON COUNTIES...INDEPENDENT CITIES AND MARINE ZONES
+CLEARED FROM SEVERE THUNDERSTORM AND TORNADO WATCHES.
+$$
+
 STATUS REPORT #3 ON <a href="ww0047.html">WW 47</a>
 
 VALID 242330Z - 250040Z
@@ -1103,7 +1185,7 @@ an increased threat for a particular event.</p>
 Page last modified:
 
 
-March 24, 2021</td>
+March 25, 2021</td>
 
       <td align="left">
         <a href="//www.weather.gov/disclaimer">

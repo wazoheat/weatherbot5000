@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-  <title>Storm Prediction Center  Severe Thunderstorm Watch 48</title>
+  <title>Storm Prediction Center  Tornado Watch 49</title>
   <meta name="DC.title" content="Storm Prediction Center Tornado/Severe Thunderstorm Watch Page" />
   <meta name="DC.description" content="SPC Tornado/Severe Thunderstorm Watch Page" />
   <meta name="DC.subject" content="Storm Prediction Center forecast products: tornado/severe thunderstorm watches" />
@@ -207,11 +207,11 @@
     </td>
     <td valign="top" align="center" width="540"><a name="contents"></a><br />
       <table cellspacing="5" cellpadding="0" width="525" border="0">
-        <tr align="center" nowrap class="zz"><zz> Severe Thunderstorm Watch 48</zz></tr>
+        <tr align="center" nowrap class="zz"><zz> Tornado Watch 49</zz></tr>
 
     <tr>
       <td align="center">
-        <b><a href="./ww0047.html"><&nbsp;Previous WW</a></b>
+        <b><a href="./ww0048.html"><&nbsp;Previous WW</a></b>
       </td>
     </tr>
 
@@ -242,19 +242,19 @@
 <table cellspacing="0" cellpadding="0" width="525" border="0" align="center" name="Tabs">
 <tr>
 <td height="25" bgcolor="#0A2390">&nbsp;</td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0048_radar_big.gif" OnMouseOver="show_tab('TAB_WW_Main')" alt="WW0048 Radar image">Public</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0049_radar_big.gif" OnMouseOver="show_tab('TAB_WW_Main')" alt="WW0049 Radar image">Public</a></td>
 <td height="25" align="center" bgcolor="#0A2390"><font color="#FFFF00"><b>|</b></font></td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="wou0048.html" OnMouseOver="show_tab('TAB_WW_WOU')" alt="WW0048 WOU">Counties</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="wou0049.html" OnMouseOver="show_tab('TAB_WW_WOU')" alt="WW0049 WOU">Counties</a></td>
 <td height="25" align="center" bgcolor="#0A2390"><font color="#FFFF00"><b>|</b></font></td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0048_prob.html" OnMouseOver="show_tab('TAB_WW_Prob')" alt="WW0048 Prob">Probabilities</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0049_prob.html" OnMouseOver="show_tab('TAB_WW_Prob')" alt="WW0049 Prob">Probabilities</a></td>
 <td height="25" align="center" bgcolor="#0A2390"><font color="#FFFF00"><b>|</b></font></td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="wou0048.html" OnMouseOver="show_tab('TAB_WW_SAW')" alt="WW0048 SAW">Aviation</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="wou0049.html" OnMouseOver="show_tab('TAB_WW_SAW')" alt="WW0049 SAW">Aviation</a></td>
 <td height="25" align="center" bgcolor="#0A2390"><font color="#FFFF00"><b>|</b></font></td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0048_warnings.gif" OnMouseOver="show_tab('TAB_WW_Warn')" alt="WW0048 Warnings">Warnings</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0049_warnings.gif" OnMouseOver="show_tab('TAB_WW_Warn')" alt="WW0049 Warnings">Warnings</a></td>
 <td height="25" align="center" bgcolor="#0A2390"><font color="#FFFF00"><b>|</b></font></td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0048_radar_init.gif" OnMouseOver="show_tab('TAB_WW_Radar_Init')" alt="WW0048 Initial RADAR image">Initial RADAR</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="ww0049_radar_init.gif" OnMouseOver="show_tab('TAB_WW_Radar_Init')" alt="WW0049 Initial RADAR image">Initial RADAR</a></td>
 <td height="25" align="center" bgcolor="#0A2390"><font color="#FFFF00"><b>|</b></font></td>
-<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="/products/md/2021/md0244.html" OnMouseOver="show_tab('TAB_WW_MD')" alt="WW 48 Related MD">Related MD</a></td>
+<td class="nav" id="menuitem" height="25" align="center" bgcolor="#0A2390"><a href="/products/md/2021/md0249.html" OnMouseOver="show_tab('TAB_WW_MD')" alt="WW 49 Related MD">Related MD</a></td>
 
 <td height="25" bgcolor="#0A2390">&nbsp;</td>
 </tr>
@@ -269,8 +269,8 @@
 <td>
 
 <div id="TAB_WW_Main" style="display:block;">
-<a href="ww0048_radar_big.gif">
-<img src="ww0048_radar.gif" alt="WW0048 Radar" width="525" height="460"></a>
+<a href="ww0049_radar_big.gif">
+<img src="ww0049_radar.gif" alt="WW0049 Radar" width="525" height="460"></a>
 <style type ="text/css">
 td.off { background:#91b8ff; }
 td.on { background:#003399; }
@@ -303,8 +303,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
 <td bgcolor='#0A2390'><span class='wwprb-matrix'><font color='#FFFFFF'>Likelihood</font></span></td>
+<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
 <td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
-<td class='wwprb-verylow'><a class='wblack' title='5% probability'>Very&nbsp;Low</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -313,8 +313,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <td class='wwprb-matrix'><a class='awhite' title='Probability of 1 or more significant (65 kt +) wind events'>65&nbsp;kt+&nbsp;Wind</a></td>
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
-<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
-<td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -335,64 +335,65 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <br /><font font-size="8pt"><span class="highlight">Note:</span>&nbsp;
 The expiration time in the watch graphic is amended if the watch is
 replaced, cancelled or extended.</font><br />
-<span class="highlight">Note:</span>&nbsp;Click for <a href="ws0048.html">Watch Status Reports</a>.<br />
+<span class="highlight">Note:</span>&nbsp;Click for <a href="ws0049.html">Watch Status Reports</a>.<br />
 <pre>
-   SEL8
+   SEL9
 
    URGENT - IMMEDIATE BROADCAST REQUESTED
-   Severe Thunderstorm Watch Number 48
+   Tornado Watch Number 49
    NWS Storm Prediction Center Norman OK
-   500 PM CDT Wed Mar 24 2021
+   950 PM CDT Wed Mar 24 2021
 
    The NWS Storm Prediction Center has issued a
 
-   * Severe Thunderstorm Watch for portions of 
-     North and northeast Texas
+   * Tornado Watch for portions of 
+     Central to northeast Texas
 
-   * Effective this Wednesday afternoon and evening from 500 PM
-     until 1000 PM CDT.
+   * Effective this Wednesday night and Thursday morning from 950 PM
+     until 400 AM CDT.
 
    * Primary threats include...
-     Scattered large hail and isolated very large hail events to 2
+     A couple tornadoes possible
+     Scattered damaging winds and isolated significant gusts to 80
+       mph possible
+     Scattered large hail and isolated very large hail events to 2.5
        inches in diameter possible
-     Isolated damaging wind gusts to 70 mph possible
-     A tornado or two possible
 
-   SUMMARY...Multiple supercells are expected to develop
-   north-northeast from north-central Texas this evening. Large hail is
-   expected to be the primary hazard.
+   SUMMARY...Multiple clusters of supercells are expected to persist
+   through the overnight. The potential for more intense clusters
+   should emanate east-northeast from the Edwards Plateau towards the
+   I-35 corridor in central Texas.
 
-   The severe thunderstorm watch area is approximately along and 40
-   statute miles north and south of a line from 30 miles northwest of
-   Fort Worth TX to 50 miles southeast of Paris TX. For a complete
-   depiction of the watch see the associated watch outline update
-   (WOUS64 KWNS WOU8).
+   The tornado watch area is approximately along and 75 statute miles
+   east and west of a line from 60 miles east northeast of Dallas TX to
+   45 miles east southeast of Del Rio TX. For a complete depiction of
+   the watch see the associated watch outline update (WOUS64 KWNS
+   WOU9).
 
    PRECAUTIONARY/PREPAREDNESS ACTIONS...
 
-   REMEMBER...A Severe Thunderstorm Watch means conditions are
-   favorable for severe thunderstorms in and close to the watch area.
-   Persons in these areas should be on the lookout for threatening
-   weather conditions and listen for later statements and possible
-   warnings. Severe thunderstorms can and occasionally do produce
-   tornadoes.
+   REMEMBER...A Tornado Watch means conditions are favorable for
+   tornadoes and severe thunderstorms in and close to the watch
+   area. Persons in these areas should be on the lookout for
+   threatening weather conditions and listen for later statements
+   and possible warnings.
 
    &&
 
-   OTHER WATCH INFORMATION...CONTINUE...<a href="ww0047.html">WW 47</a>...
+   OTHER WATCH INFORMATION...CONTINUE...<a href="ww0047.html">WW 47</a>...<a href="ww0048.html">WW 48</a>...
 
-   AVIATION...A few severe thunderstorms with hail surface and aloft to
-   2 inches. Extreme turbulence and surface wind gusts to 60 knots. A
-   few cumulonimbi with maximum tops to 500. Mean storm motion vector
-   22040.
+   AVIATION...Tornadoes and a few severe thunderstorms with hail
+   surface and aloft to 2.5 inches. Extreme turbulence and surface wind
+   gusts to 70 knots. A few cumulonimbi with maximum tops to 550. Mean
+   storm motion vector 22030.
 
    ...Grams
 </pre>
 </div>
 
 <div id="TAB_WW_Radar_Init" style="display:none;">
-<a href="ww0048_radar_init.gif">
-<img src="ww0048_radar_init_resize.gif" alt="WW0048 Initial Radar image" width="525" height="460"></a>
+<a href="ww0049_radar_init.gif">
+<img src="ww0049_radar_init_resize.gif" alt="WW0049 Initial Radar image" width="525" height="460"></a>
 <style type ="text/css">
 td.off { background:#91b8ff; }
 td.on { background:#003399; }
@@ -425,8 +426,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
 <td bgcolor='#0A2390'><span class='wwprb-matrix'><font color='#FFFFFF'>Likelihood</font></span></td>
+<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
 <td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
-<td class='wwprb-verylow'><a class='wblack' title='5% probability'>Very&nbsp;Low</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -435,8 +436,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <td class='wwprb-matrix'><a class='awhite' title='Probability of 1 or more significant (65 kt +) wind events'>65&nbsp;kt+&nbsp;Wind</a></td>
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
-<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
-<td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -455,62 +456,63 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </table>
 
 <pre>
-   SEL8
+   SEL9
 
    URGENT - IMMEDIATE BROADCAST REQUESTED
-   Severe Thunderstorm Watch Number 48
+   Tornado Watch Number 49
    NWS Storm Prediction Center Norman OK
-   500 PM CDT Wed Mar 24 2021
+   950 PM CDT Wed Mar 24 2021
 
    The NWS Storm Prediction Center has issued a
 
-   * Severe Thunderstorm Watch for portions of 
-     North and northeast Texas
+   * Tornado Watch for portions of 
+     Central to northeast Texas
 
-   * Effective this Wednesday afternoon and evening from 500 PM
-     until 1000 PM CDT.
+   * Effective this Wednesday night and Thursday morning from 950 PM
+     until 400 AM CDT.
 
    * Primary threats include...
-     Scattered large hail and isolated very large hail events to 2
+     A couple tornadoes possible
+     Scattered damaging winds and isolated significant gusts to 80
+       mph possible
+     Scattered large hail and isolated very large hail events to 2.5
        inches in diameter possible
-     Isolated damaging wind gusts to 70 mph possible
-     A tornado or two possible
 
-   SUMMARY...Multiple supercells are expected to develop
-   north-northeast from north-central Texas this evening. Large hail is
-   expected to be the primary hazard.
+   SUMMARY...Multiple clusters of supercells are expected to persist
+   through the overnight. The potential for more intense clusters
+   should emanate east-northeast from the Edwards Plateau towards the
+   I-35 corridor in central Texas.
 
-   The severe thunderstorm watch area is approximately along and 40
-   statute miles north and south of a line from 30 miles northwest of
-   Fort Worth TX to 50 miles southeast of Paris TX. For a complete
-   depiction of the watch see the associated watch outline update
-   (WOUS64 KWNS WOU8).
+   The tornado watch area is approximately along and 75 statute miles
+   east and west of a line from 60 miles east northeast of Dallas TX to
+   45 miles east southeast of Del Rio TX. For a complete depiction of
+   the watch see the associated watch outline update (WOUS64 KWNS
+   WOU9).
 
    PRECAUTIONARY/PREPAREDNESS ACTIONS...
 
-   REMEMBER...A Severe Thunderstorm Watch means conditions are
-   favorable for severe thunderstorms in and close to the watch area.
-   Persons in these areas should be on the lookout for threatening
-   weather conditions and listen for later statements and possible
-   warnings. Severe thunderstorms can and occasionally do produce
-   tornadoes.
+   REMEMBER...A Tornado Watch means conditions are favorable for
+   tornadoes and severe thunderstorms in and close to the watch
+   area. Persons in these areas should be on the lookout for
+   threatening weather conditions and listen for later statements
+   and possible warnings.
 
    &&
 
-   OTHER WATCH INFORMATION...CONTINUE...<a href="ww0047.html">WW 47</a>...
+   OTHER WATCH INFORMATION...CONTINUE...<a href="ww0047.html">WW 47</a>...<a href="ww0048.html">WW 48</a>...
 
-   AVIATION...A few severe thunderstorms with hail surface and aloft to
-   2 inches. Extreme turbulence and surface wind gusts to 60 knots. A
-   few cumulonimbi with maximum tops to 500. Mean storm motion vector
-   22040.
+   AVIATION...Tornadoes and a few severe thunderstorms with hail
+   surface and aloft to 2.5 inches. Extreme turbulence and surface wind
+   gusts to 70 knots. A few cumulonimbi with maximum tops to 550. Mean
+   storm motion vector 22030.
 
    ...Grams
 </pre>
 </div>
 
 <div id="TAB_WW_WOU" style="display:none;">
-<a href="ww0048_overview_big_wou.gif">
-<img src="ww0048_overview_wou.gif" alt="WW0048 WOU" width="525" height="460"></a>
+<a href="ww0049_overview_big_wou.gif">
+<img src="ww0049_overview_wou.gif" alt="WW0049 WOU" width="525" height="460"></a>
 <style type ="text/css">
 td.off { background:#91b8ff; }
 td.on { background:#003399; }
@@ -543,8 +545,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
 <td bgcolor='#0A2390'><span class='wwprb-matrix'><font color='#FFFFFF'>Likelihood</font></span></td>
+<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
 <td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
-<td class='wwprb-verylow'><a class='wblack' title='5% probability'>Very&nbsp;Low</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -553,8 +555,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <td class='wwprb-matrix'><a class='awhite' title='Probability of 1 or more significant (65 kt +) wind events'>65&nbsp;kt+&nbsp;Wind</a></td>
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
-<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
-<td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -573,37 +575,48 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </table>
 
 <br />
-<span class="highlight">Note:</span>&nbsp;Click for <a href="ws0048.html">Watch Status Reports</a>.<br />
+<span class="highlight">Note:</span>&nbsp;Click for <a href="ws0049.html">Watch Status Reports</a>.<br />
 <pre>
-   WOUS64 KWNS 242155
-   WOU8
+   WOUS64 KWNS 250248
+   WOU9
 
    BULLETIN - IMMEDIATE BROADCAST REQUESTED
-   SEVERE THUNDERSTORM WATCH OUTLINE UPDATE FOR WS 48
+   TORNADO WATCH OUTLINE UPDATE FOR WT 49
    NWS STORM PREDICTION CENTER NORMAN OK
-   500 PM CDT WED MAR 24 2021
+   950 PM CDT WED MAR 24 2021
 
-   SEVERE THUNDERSTORM WATCH 48 IS IN EFFECT UNTIL 1000 PM CDT
-   FOR THE FOLLOWING LOCATIONS
+   TORNADO WATCH 49 IS IN EFFECT UNTIL 400 AM CDT FOR THE
+    FOLLOWING LOCATIONS
 
-   TXC063-085-097-113-119-121-147-159-181-183-223-231-277-343-367-
-   379-387-397-423-439-449-459-497-499-250300-
-   /O.NEW.KWNS.SV.A.0048.210324T2200Z-210325T0300Z/
+   TXC019-027-029-031-035-053-085-091-099-113-119-137-139-145-161-
+   171-193-209-213-217-223-231-251-257-259-265-267-271-281-293-299-
+   307-309-319-325-327-333-349-379-385-397-411-435-439-453-463-465-
+   467-491-250900-
+   /O.NEW.KWNS.TO.A.0049.210325T0250Z-210325T0900Z/
 
    TX 
    .    TEXAS COUNTIES INCLUDED ARE
 
-   CAMP                 COLLIN              COOKE               
-   DALLAS               DELTA               DENTON              
-   FANNIN               FRANKLIN            GRAYSON             
-   GREGG                HOPKINS             HUNT                
-   LAMAR                MORRIS              PARKER              
-   RAINS                RED RIVER           ROCKWALL            
-   SMITH                TARRANT             TITUS               
-   UPSHUR               WISE                WOOD                
+   BANDERA              BELL                BEXAR               
+   BLANCO               BOSQUE              BURNET              
+   COLLIN               COMAL               CORYELL             
+   DALLAS               DELTA               EDWARDS             
+   ELLIS                FALLS               FREESTONE           
+   GILLESPIE            HAMILTON            HAYS                
+   HENDERSON            HILL                HOPKINS             
+   HUNT                 JOHNSON             KAUFMAN             
+   KENDALL              KERR                KIMBLE              
+   KINNEY               LAMPASAS            LIMESTONE           
+   LLANO                MASON               MCCULLOCH           
+   MCLENNAN             MEDINA              MENARD              
+   MILLS                NAVARRO             RAINS               
+   REAL                 ROCKWALL            SAN SABA            
+   SUTTON               TARRANT             TRAVIS              
+   UVALDE               VAL VERDE           VAN ZANDT           
+   WILLIAMSON           
 
 
-   ATTN...WFO...SHV...FWD...
+   ATTN...WFO...EWX...FWD...SJT...
 
 
 
@@ -611,8 +624,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </div>
 
 <div id="TAB_WW_SAW" style="display:none;">
-<a href="ww0048_overview_big.gif">
-<img src="ww0048_overview.gif" alt="WW0048 SAW" width="525" height="460"></a>
+<a href="ww0049_overview_big.gif">
+<img src="ww0049_overview.gif" alt="WW0049 SAW" width="525" height="460"></a>
 <style type ="text/css">
 td.off { background:#91b8ff; }
 td.on { background:#003399; }
@@ -645,8 +658,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
 <td bgcolor='#0A2390'><span class='wwprb-matrix'><font color='#FFFFFF'>Likelihood</font></span></td>
+<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
 <td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
-<td class='wwprb-verylow'><a class='wblack' title='5% probability'>Very&nbsp;Low</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -655,8 +668,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <td class='wwprb-matrix'><a class='awhite' title='Probability of 1 or more significant (65 kt +) wind events'>65&nbsp;kt+&nbsp;Wind</a></td>
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
-<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
-<td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -678,53 +691,59 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 The Aviation Watch (SAW) product is an approximation to the watch area.
 The actual watch is depicted by the shaded areas.</font><br />
 <pre>
-   SAW8 
-   WW 48 SEVERE TSTM TX 242200Z - 250300Z
-   AXIS..40 STATUTE MILES NORTH AND SOUTH OF LINE..
-   30NW FTW/FORT WORTH TX/ - 50SE PRX/PARIS TX/
-   ..AVIATION COORDS.. 35NM N/S /38WNW TTT - 42N GGG/
-   HAIL SURFACE AND ALOFT..2 INCHES. WIND GUSTS..60 KNOTS.
-   MAX TOPS TO 500. MEAN STORM MOTION VECTOR 22040.
+   SAW9 
+   WW 49 TORNADO TX 250250Z - 250900Z
+   AXIS..75 STATUTE MILES EAST AND WEST OF LINE..
+   60ENE DAL/DALLAS TX/ - 45ESE DRT/DEL RIO TX/
+   ..AVIATION COORDS.. 65NM E/W /61ENE TTT - 32ESE DLF/
+   HAIL SURFACE AND ALOFT..2.5 INCHES. WIND GUSTS..70 KNOTS.
+   MAX TOPS TO 550. MEAN STORM MOTION VECTOR 22030.
 
-   LAT...LON 33719774 33709484 32549484 32559774
+   LAT...LON 33169459 29119899 29110147 33169719
 
    THIS IS AN APPROXIMATION TO THE WATCH AREA.  FOR A
    COMPLETE DEPICTION OF THE WATCH SEE WOUS64 KWNS
-   FOR WOU8.
+   FOR WOU9.
 
 </pre>
-      <p><b>Watch 48 Status Report Messages:</b></p>
+      <p><b>Watch 49 Status Report Messages:</b></p>
 <pre>
-STATUS REPORT #5 ON <a href="ww0048.html">WW 48</a>
+STATUS REPORT #3 ON <a href="ww0049.html">WW 49</a>
 
-VALID 250140Z - 250240Z
+VALID 250535Z - 250640Z
 
-THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
+SEVERE WEATHER THREAT CONTINUES RIGHT OF A LINE FROM 15 SW DRT TO
+25 ESE JCT TO 65 WNW AUS TO 35 W ACT TO 15 SE DAL TO 15 SSE PRX.
 
-..COOK..03/25/21
+..LEITMAN..03/25/21
 
-ATTN...WFO...SHV...FWD...
+ATTN...WFO...EWX...FWD...SJT...
 
 &&
 
-STATUS REPORT FOR WS 48 
+STATUS REPORT FOR WT 49 
 
 SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
 
-TXC063-085-097-113-119-121-147-159-181-183-223-231-277-343-367-
-379-387-397-423-439-449-459-497-499-250240-
+TXC019-027-029-031-035-053-091-099-119-139-145-161-171-209-213-
+217-223-231-257-259-265-271-281-293-299-309-325-349-379-385-453-
+463-467-491-250640-
 
 TX 
 .    TEXAS COUNTIES INCLUDED ARE
 
-CAMP		     COLLIN		 COOKE		     
-DALLAS		     DELTA		 DENTON 	     
-FANNIN		     FRANKLIN		 GRAYSON	     
-GREGG		     HOPKINS		 HUNT		     
-LAMAR		     MORRIS		 PARKER 	     
-RAINS		     RED RIVER		 ROCKWALL	     
-SMITH		     TARRANT		 TITUS		     
-UPSHUR		     WISE		 WOOD		     
+BANDERA 	     BELL		 BEXAR		     
+BLANCO		     BOSQUE		 BURNET 	     
+COMAL		     CORYELL		 DELTA		     
+ELLIS		     FALLS		 FREESTONE	     
+GILLESPIE	     HAYS		 HENDERSON	     
+HILL		     HOPKINS		 HUNT		     
+KAUFMAN 	     KENDALL		 KERR		     
+KINNEY		     LAMPASAS		 LIMESTONE	     
+LLANO		     MCLENNAN		 MEDINA 	     
+NAVARRO 	     RAINS		 REAL		     
+TRAVIS		     UVALDE		 VAN ZANDT	     
+WILLIAMSON	     
 $$
 
 
@@ -734,38 +753,47 @@ INFORMATION ON COUNTIES...INDEPENDENT CITIES AND MARINE ZONES
 CLEARED FROM SEVERE THUNDERSTORM AND TORNADO WATCHES.
 $$
 
-STATUS REPORT #4 ON <a href="ww0048.html">WW 48</a>
+STATUS REPORT #2 ON <a href="ww0049.html">WW 49</a>
 
-VALID 250040Z - 250140Z
+VALID 250455Z - 250540Z
 
-THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
+SEVERE WEATHER THREAT CONTINUES RIGHT OF A LINE FROM 10 WNW DRT
+TO 50 S BWD TO 25 NNE DAL.
 
-FOR ADDITIONAL INFORMATION SEE <a href="../md/md0244.html">MESOSCALE DISCUSSION 244</a>
+FOR ADDITIONAL INFORMATION SEE <a href="../md/md0249.html">MESOSCALE DISCUSSION 249</a>
 
-..COOK..03/25/21
+..SMITH..03/25/21
 
-ATTN...WFO...SHV...FWD...
+ATTN...WFO...EWX...FWD...SJT...
 
 &&
 
-STATUS REPORT FOR WS 48 
+STATUS REPORT FOR WT 49 
 
 SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
 
-TXC063-085-097-113-119-121-147-159-181-183-223-231-277-343-367-
-379-387-397-423-439-449-459-497-499-250140-
+TXC019-027-029-031-035-053-091-099-119-137-139-145-161-171-193-
+209-213-217-223-231-251-257-259-265-267-271-281-293-299-309-319-
+325-333-349-379-385-397-411-453-463-465-467-491-250540-
 
 TX 
 .    TEXAS COUNTIES INCLUDED ARE
 
-CAMP		     COLLIN		 COOKE		     
-DALLAS		     DELTA		 DENTON 	     
-FANNIN		     FRANKLIN		 GRAYSON	     
-GREGG		     HOPKINS		 HUNT		     
-LAMAR		     MORRIS		 PARKER 	     
-RAINS		     RED RIVER		 ROCKWALL	     
-SMITH		     TARRANT		 TITUS		     
-UPSHUR		     WISE		 WOOD		     
+BANDERA 	     BELL		 BEXAR		     
+BLANCO		     BOSQUE		 BURNET 	     
+COMAL		     CORYELL		 DELTA		     
+EDWARDS 	     ELLIS		 FALLS		     
+FREESTONE	     GILLESPIE		 HAMILTON	     
+HAYS		     HENDERSON		 HILL		     
+HOPKINS 	     HUNT		 JOHNSON	     
+KAUFMAN 	     KENDALL		 KERR		     
+KIMBLE		     KINNEY		 LAMPASAS	     
+LIMESTONE	     LLANO		 MCLENNAN	     
+MASON		     MEDINA		 MILLS		     
+NAVARRO 	     RAINS		 REAL		     
+ROCKWALL	     SAN SABA		 TRAVIS 	     
+UVALDE		     VAL VERDE		 VAN ZANDT	     
+WILLIAMSON	     
 $$
 
 
@@ -775,114 +803,49 @@ INFORMATION ON COUNTIES...INDEPENDENT CITIES AND MARINE ZONES
 CLEARED FROM SEVERE THUNDERSTORM AND TORNADO WATCHES.
 $$
 
-STATUS REPORT #3 ON <a href="ww0048.html">WW 48</a>
+STATUS REPORT #1 ON <a href="ww0049.html">WW 49</a>
 
-VALID 242330Z - 250040Z
+VALID 250335Z - 250440Z
 
 THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
 
-..COOK..03/24/21
+FOR ADDITIONAL INFORMATION SEE <a href="../md/md0247.html">MESOSCALE DISCUSSION 247</a>
 
-ATTN...WFO...SHV...FWD...
+..SMITH..03/25/21
+
+ATTN...WFO...EWX...FWD...SJT...
 
 &&
 
-STATUS REPORT FOR WS 48 
+STATUS REPORT FOR WT 49 
 
 SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
 
-TXC063-085-097-113-119-121-147-159-181-183-223-231-277-343-367-
-379-387-397-423-439-449-459-497-499-250040-
+TXC019-027-029-031-035-053-085-091-099-113-119-137-139-145-161-
+171-193-209-213-217-223-231-251-257-259-265-267-271-281-293-299-
+307-309-319-325-327-333-349-379-385-397-411-435-439-453-463-465-
+467-491-250440-
 
 TX 
 .    TEXAS COUNTIES INCLUDED ARE
 
-CAMP		     COLLIN		 COOKE		     
-DALLAS		     DELTA		 DENTON 	     
-FANNIN		     FRANKLIN		 GRAYSON	     
-GREGG		     HOPKINS		 HUNT		     
-LAMAR		     MORRIS		 PARKER 	     
-RAINS		     RED RIVER		 ROCKWALL	     
-SMITH		     TARRANT		 TITUS		     
-UPSHUR		     WISE		 WOOD		     
-$$
-
-
-THE WATCH STATUS MESSAGE IS FOR GUIDANCE PURPOSES ONLY.  PLEASE
-REFER TO WATCH COUNTY NOTIFICATION STATEMENTS FOR OFFICIAL
-INFORMATION ON COUNTIES...INDEPENDENT CITIES AND MARINE ZONES
-CLEARED FROM SEVERE THUNDERSTORM AND TORNADO WATCHES.
-$$
-
-STATUS REPORT #2 ON <a href="ww0048.html">WW 48</a>
-
-VALID 242235Z - 242340Z
-
-THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
-
-..COOK..03/24/21
-
-ATTN...WFO...SHV...FWD...
-
-&&
-
-STATUS REPORT FOR WS 48 
-
-SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
-
-TXC063-085-097-113-119-121-147-159-181-183-223-231-277-343-367-
-379-387-397-423-439-449-459-497-499-242340-
-
-TX 
-.    TEXAS COUNTIES INCLUDED ARE
-
-CAMP		     COLLIN		 COOKE		     
-DALLAS		     DELTA		 DENTON 	     
-FANNIN		     FRANKLIN		 GRAYSON	     
-GREGG		     HOPKINS		 HUNT		     
-LAMAR		     MORRIS		 PARKER 	     
-RAINS		     RED RIVER		 ROCKWALL	     
-SMITH		     TARRANT		 TITUS		     
-UPSHUR		     WISE		 WOOD		     
-$$
-
-
-THE WATCH STATUS MESSAGE IS FOR GUIDANCE PURPOSES ONLY.  PLEASE
-REFER TO WATCH COUNTY NOTIFICATION STATEMENTS FOR OFFICIAL
-INFORMATION ON COUNTIES...INDEPENDENT CITIES AND MARINE ZONES
-CLEARED FROM SEVERE THUNDERSTORM AND TORNADO WATCHES.
-$$
-
-STATUS REPORT #1 ON <a href="ww0048.html">WW 48</a>
-
-VALID 242235Z - 250000Z
-
-THE SEVERE WEATHER THREAT CONTINUES ACROSS THE ENTIRE WATCH AREA.
-
-..SMITH..03/24/21
-
-ATTN...WFO...SHV...FWD...
-
-&&
-
-STATUS REPORT FOR WS 48 
-
-SEVERE WEATHER THREAT CONTINUES FOR THE FOLLOWING AREAS 
-
-TXC063-085-097-113-119-121-147-159-181-183-223-231-277-343-367-
-379-387-397-423-439-449-459-497-499-250000-
-
-TX 
-.    TEXAS COUNTIES INCLUDED ARE
-
-CAMP		     COLLIN		 COOKE		     
-DALLAS		     DELTA		 DENTON 	     
-FANNIN		     FRANKLIN		 GRAYSON	     
-GREGG		     HOPKINS		 HUNT		     
-LAMAR		     MORRIS		 PARKER 	     
-RAINS		     RED RIVER		 ROCKWALL	     
-SMITH		     TARRANT		 TITUS		     
-UPSHUR		     WISE		 WOOD		     
+BANDERA 	     BELL		 BEXAR		     
+BLANCO		     BOSQUE		 BURNET 	     
+COLLIN		     COMAL		 CORYELL	     
+DALLAS		     DELTA		 EDWARDS	     
+ELLIS		     FALLS		 FREESTONE	     
+GILLESPIE	     HAMILTON		 HAYS		     
+HENDERSON	     HILL		 HOPKINS	     
+HUNT		     JOHNSON		 KAUFMAN	     
+KENDALL 	     KERR		 KIMBLE 	     
+KINNEY		     LAMPASAS		 LIMESTONE	     
+LLANO		     MCCULLOCH		 MCLENNAN	     
+MASON		     MEDINA		 MENARD 	     
+MILLS		     NAVARRO		 RAINS		     
+REAL		     ROCKWALL		 SAN SABA	     
+SUTTON		     TARRANT		 TRAVIS 	     
+UVALDE		     VAL VERDE		 VAN ZANDT	     
+WILLIAMSON	     
 $$
 
 
@@ -896,8 +859,8 @@ $$
 </div>
 
 <div id="TAB_WW_Warn" style="display:none;">
-<a href="ww0048_warnings.gif">
-<img src="ww0048_warnings_resize.gif" alt="WW0048 Warnings" width="525" height="460"></a>
+<a href="ww0049_warnings.gif">
+<img src="ww0049_warnings_resize.gif" alt="WW0049 Warnings" width="525" height="460"></a>
 <style type ="text/css">
 td.off { background:#91b8ff; }
 td.on { background:#003399; }
@@ -930,8 +893,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
 <td bgcolor='#0A2390'><span class='wwprb-matrix'><font color='#FFFFFF'>Likelihood</font></span></td>
+<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
 <td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
-<td class='wwprb-verylow'><a class='wblack' title='5% probability'>Very&nbsp;Low</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -940,8 +903,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <td class='wwprb-matrix'><a class='awhite' title='Probability of 1 or more significant (65 kt +) wind events'>65&nbsp;kt+&nbsp;Wind</a></td>
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
-<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
-<td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -967,8 +930,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </div>
 
 <div id="TAB_WW_Prob" style="display:none;">
-<a href="ww0048_radar_big.gif">
-<img src="ww0048_radar.gif" alt="WW0048 Probability" width="525" height="460"></a>
+<a href="ww0049_radar_big.gif">
+<img src="ww0049_radar.gif" alt="WW0049 Probability" width="525" height="460"></a>
 <style type ="text/css">
 td.off { background:#91b8ff; }
 td.on { background:#003399; }
@@ -1001,8 +964,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
 <td bgcolor='#0A2390'><span class='wwprb-matrix'><font color='#FFFFFF'>Likelihood</font></span></td>
+<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
 <td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
-<td class='wwprb-verylow'><a class='wblack' title='5% probability'>Very&nbsp;Low</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -1011,8 +974,8 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 <td class='wwprb-matrix'><a class='awhite' title='Probability of 1 or more significant (65 kt +) wind events'>65&nbsp;kt+&nbsp;Wind</a></td>
 </tr>
 <tr style='background-color: #888888; text-align: center; color: black; font-size: 8pt; font-family: arial;'>
-<td class='wwprb-moderate'><a class='wblack' title='30% probability'>Moderate</a></td>
-<td class='wwprb-low'><a class='wblack' title='20% probability'>Low</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
+<td class='wwprb-moderate'><a class='wblack' title='40% probability'>Moderate</a></td>
 </tr></table></td>
 <td style='border: 1px solid black;'>
 <table width='100%' border='0' cellspacing='1' cellpadding='1'>
@@ -1032,7 +995,7 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
 
 <br />
 <font font-size="8pt"><span class="highlight">Note:</span>
-&nbsp;Click for <a href="wwp0048.txt">Complete Product Text</a>.
+&nbsp;Click for <a href="wwp0049.txt">Complete Product Text</a>.
 </font><br />
 
 <span style="font-weight: bold; font-family: arial; color: rgb(255, 0, 0);">Tornadoes</span><br />
@@ -1043,7 +1006,7 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
       <td>Probability of 2 or more tornadoes <br />
       </td>
       <td width="100">
-      <p align="center"><span style="font-family: arial; color: rgb(204,0,0);  "> Low (20%)</span><br />
+      <p align="center"><span style="font-family: arial; color: rgb(204,0,0);  "> Mod (30%)</span><br />
       </p>
       </td>
     </tr>
@@ -1051,7 +1014,7 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
       <td>Probability of 1 or more strong (EF2-EF5) tornadoes<br />
       </td>
       <td width="100">
-      <p align="center"><span style="font-family: arial; color: rgb(204,0,0);  "> Low (5%)</span><br />
+      <p align="center"><span style="font-family: arial; color: rgb(204,0,0);  "> Low (20%)</span><br />
       </p>
       </td>
     </tr>
@@ -1065,7 +1028,7 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
       <td>Probability of 10 or more severe wind events<br />
       </td>
       <td>
-      <p align="center"><span style="font-family: arial; color: rgb(0,0,153);   "> Mod (30%)</span><br />
+      <p align="center"><span style="font-family: arial; color: rgb(0,0,153);   "> Mod (40%)</span><br />
       </p>
       </td>
     </tr>
@@ -1073,7 +1036,7 @@ A.awhite:hover { color: #ffffff; font-size: 8pt; text-decoration: underline; fon
       <td>Probability of 1 or more wind events &gt; 65 knots<br />
       </td>
       <td width="100">
-      <p align="center"><span style="font-family: arial; color: rgb(0,0,153);   "> Low (20%)</span><br />
+      <p align="center"><span style="font-family: arial; color: rgb(0,0,153);   "> Mod (40%)</span><br />
       </p>
       </td>
     </tr>
@@ -1128,9 +1091,9 @@ an increased threat for a particular event.</p>
 </div>
 
 <div id="TAB_WW_MD" style="display:none;">
-<a href="/products/md/2021/mcd0244.gif">
-<img src="/products/md/2021/mcd0244.gif" alt="md0244 graphic" width="525" height="460"></a>
-<br /><center><b><a href="/products/md/2021/md0244.html">Go to md0244 discussion</a></b></center><br /><br /><br />
+<a href="/products/md/2021/mcd0249.gif">
+<img src="/products/md/2021/mcd0249.gif" alt="md0249 graphic" width="525" height="460"></a>
+<br /><center><b><a href="/products/md/2021/md0249.html">Go to md0249 discussion</a></b></center><br /><br /><br />
 </div>
 
 
@@ -1145,7 +1108,7 @@ an increased threat for a particular event.</p>
       <tr>
       <td align="center" valign="center">
         <font size="-1">
-        <a href="#top">Top of Page</a>/<a href="ws0048.html">Status Messages for this watch</a>/<a href="./">All Current Watches</a>/<a href="../">Forecast Products</a>/<a href="/">Home</a>
+        <a href="#top">Top of Page</a>/<a href="ws0049.html">Status Messages for this watch</a>/<a href="./">All Current Watches</a>/<a href="../">Forecast Products</a>/<a href="/">Home</a>
         </font>
       </td>
       </tr>
