@@ -66,6 +66,8 @@ def check_risks(fn):
                     now_utc=datetime.datetime.utcnow()
                     yesterday_utc=now_utc - datetime.timedelta(days = 1)
                     outlooks[-1].yyyymmdd_utc=yesterday_utc.strftime("%Y%m%d")
+                print(outlooks[-1].yyyymmdd)
+                print(outlooks[-1].yyyymmdd_utc)
                 yyyy=outlooks[-1].yyyymmdd_utc[:4]
                 mm=outlooks[-1].yyyymmdd_utc[4:6]
                 dd=outlooks[-1].yyyymmdd_utc[6:]
@@ -79,6 +81,8 @@ def check_risks(fn):
                 date_time_str = outlooks[-1].yyyymmdd_utc + outlooks[-1].valid + " +0000"
                 outlooks[-1].time_utc = datetime.datetime.strptime(date_time_str, '%Y%m%d%H%M %z')
                 outlooks[-1].time_cdt=outlooks[-1].time_utc - datetime.timedelta (hours=5)
+                print(outlooks[-1].time_utc)
+                print(outlooks[-1].time_cdt)
 #                day+=1
                 break
 
@@ -229,7 +233,7 @@ def post(subr,title,template_file,outlook,watches,post,update):
     if not watches_text:
         watches_text=[ "* *None in effect*" ]
 
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd[-2:],mm=outlook.yyyymmdd[-4:-2],yyyy=outlook.yyyymmdd[:4],yyyymmdd=outlook.yyyymmdd,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update)
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update)
 
     if not title:
         title="[Megathread] Southeastern US Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
