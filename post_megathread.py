@@ -332,7 +332,7 @@ def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,
     for md in mds:
         mds_text.append(f"[MD {md.no}: {md.concerning}]({md.url}), {md.area}")
         for line in md.summary:
-            mds_text.append(f"\n>{line}")
+            mds_text.append(f">{line.strip()}")
         mds_text.append("\n----")
 
     if not mds_text:
@@ -370,7 +370,7 @@ if __name__ == '__main__':
     parser.add_argument('--update', help='"update" should provide the base-32 id of an existing post to update; if --post is not specified, this argument does nothing')
     parser.add_argument('--location', type=str, help='"location" should describe the location of the specific severe weather threat for the title of the post; if --post is not specified or if --update *is* specified, this argument does nothing')
     parser.add_argument('--sub', type=str, help='"sub" specifies the subreddit to submit to; if --post is not specified, this argument does nothing')
-    parser.add_argument('--verbose', type=str, help='Specify verbose output')
+    parser.add_argument('--verbose', action='store_true', help='Specify verbose output')
 
     args = parser.parse_args()
 
