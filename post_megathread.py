@@ -188,6 +188,26 @@ def populate_watches(watches):
 
     return watches
 
+def get_previous_outlooks(outlook):
+    """Checks for existance of previous daily outlooks, outputs them into a string for use in the megathread"""
+    prev_outlooks=""
+    times=["1200","1300","1630","2000"]
+    for time in times:
+        prev_outlook_url=f"https://www.spc.noaa.gov/products/outlook/archive/{outlook.yyyymmdd_utc[:4]}/day1otlk_{outlook.yyyymmdd_utc}_{time}.html"
+        res = requests.get(prev_outlook_url)
+        if res.status_code == 404:
+            print(f"Did not find {time}z outlook")
+        else:
+            if not prev_outlooks:
+                prev_outlooks=" * Previous Versions: "
+            #0600 outlook corresponds to "1200z" url, otherwise urls are same as outlook times
+            if time == "1200":
+                prev_outlooks = prev_outlooks + f"[0600 UTC]({prev_outlook_url})"
+            else:
+                prev_outlooks = prev_outlooks + f" — [{time} UTC]({prev_outlook_url})"
+
+    return prev_outlooks
+
 def post(subr,title,location,template_file,outlook,watches,post,update):
 
     #Open credentials file and populate the praw object and various settings for posting to reddit
@@ -233,7 +253,9 @@ def post(subr,title,location,template_file,outlook,watches,post,update):
     if not watches_text:
         watches_text=[ "* *None in effect*" ]
 
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update)
+    prev_outlooks=get_previous_outlooks(outlook)
+
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update,previous_outlooks=prev_outlooks)
 
     if not title and not update:
         title="[Megathread] " + location + " Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
