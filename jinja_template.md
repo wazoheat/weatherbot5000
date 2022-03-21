@@ -18,6 +18,10 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
 
 {{watches_text}}
 
+**Mesoscale Discussions:**
+
+{{mds_text}}
+
 # Alternate links for further information
 
 **Live updates**

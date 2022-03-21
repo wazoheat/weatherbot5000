@@ -19,6 +19,16 @@ class WatchType:
         self.url = 'https://www.spc.noaa.gov/products/watch/ww' + self.no.zfill(4) + '.html'
         self.easyurl = ""
 
+class MDType:
+    def __init__(self, no=0, **kwargs):
+        self.no = no
+        self.concerning = kwargs.get('concerning', [])
+        self.url = 'https://www.spc.noaa.gov/products/md/md' + self.no.zfill(4) + '.html'
+        self.easyurl = ""
+        self.summary = kwargs.get('summary', [])
+        self.prob    = ""
+        self.area = kwargs.get('area', [])
+
 class OutlookType:
     now=datetime.datetime.now()
     now_utc=datetime.datetime.utcnow()
@@ -38,7 +48,6 @@ class OutlookType:
         else:
             self.arisk = "a " + self.risk
         self.prev = kwargs.get('prev', [])
-
 
 def check_risks(fn):
     with open(fn) as fp:
@@ -66,8 +75,6 @@ def check_risks(fn):
                     now_utc=datetime.datetime.utcnow()
                     yesterday_utc=now_utc - datetime.timedelta(days = 1)
                     outlooks[-1].yyyymmdd_utc=yesterday_utc.strftime("%Y%m%d")
-                print(outlooks[-1].yyyymmdd)
-                print(outlooks[-1].yyyymmdd_utc)
                 yyyy=outlooks[-1].yyyymmdd_utc[:4]
                 mm=outlooks[-1].yyyymmdd_utc[4:6]
                 dd=outlooks[-1].yyyymmdd_utc[6:]
@@ -81,8 +88,6 @@ def check_risks(fn):
                 date_time_str = outlooks[-1].yyyymmdd_utc + outlooks[-1].valid + " +0000"
                 outlooks[-1].time_utc = datetime.datetime.strptime(date_time_str, '%Y%m%d%H%M %z')
                 outlooks[-1].time_cdt=outlooks[-1].time_utc - datetime.timedelta (hours=5)
-                print(outlooks[-1].time_utc)
-                print(outlooks[-1].time_cdt)
 #                day+=1
                 break
 
@@ -146,6 +151,36 @@ def check_watches(fn):
 
         return watches
 
+def check_mds(fn):
+    with open(fn) as fp:
+        mds=[]
+        while True:
+            line = fp.readline()
+
+            if not line:
+                break
+            # Each mesoscale discussion entry starts with this line
+            if '<table><tr>' in line:
+                for _ in range(2):
+                    next(fp) #Skip 2 lines to get to MD number
+                line=fp.readline()
+                x=re.split("[<>]", line)
+                mdinfo=x[4]
+                print(mdinfo)
+                mdno=re.split("#", mdinfo)
+                for _ in range(2):
+                    next(fp) #Skip 2 more lines to check if this is a "severe" MD
+                line=fp.readline()
+                print(f'concerning line is {line}')
+                x=re.split("[<>]", line)
+                mdconcerning=x[2]
+                print(mdconcerning)
+                if "SEVERE" in mdconcerning or "WATCH" in mdconcerning:
+                    print(f'Appending MD {mdno[1]}, {mdconcerning}')
+                    mds.append(MDType(no=mdno[1],concerning=mdconcerning))
+
+        return mds
+
 def populate_watches(watches):
     for watch in watches:
 
@@ -188,6 +223,45 @@ def populate_watches(watches):
 
     return watches
 
+def populate_mds(mds):
+    for md in mds:
+
+        fn_md="md" + md.no.zfill(4) + ".txt"
+        if args.gotime:
+            res = requests.get(md.url)
+            if res.status_code != 200:
+                print('WARNING: potentially unsuccessful HTTP status code for {md.url}: ', res.status_code)
+            print(res.text, file=open(fn_md, 'w'))
+        else:
+            print('Running in debug mode; specify argument "--gotime" to run the real deal')
+        with open(fn_md) as fp:
+            while True:
+                line = fp.readline()
+
+                if not line:
+                    break
+
+                if "Probability of Watch Issuance" in line:
+                    line=fp.readline()
+                    while line.strip():
+                        md.prob= re.sub('[^0-9]', '', line)
+
+                if "SUMMARY..." in line:
+                    while line.strip():
+                        md.summary.append(line.strip())
+                        line=fp.readline()
+
+                if "Areas affected..." in line:
+                    x=re.split("Areas affected...", line)
+                    md.area=x[1]
+
+        print(f'MD {md.no}')
+        if md.prob:
+            print(f'Probability of Watch Issuance: {md.prob}')
+        print(f"Area: {md.area}")
+        print(f"Summary:\n{md.summary}")
+    return mds
+
 def get_previous_outlooks(outlook):
     """Checks for existance of previous daily outlooks, outputs them into a string for use in the megathread"""
     prev_outlooks=""
@@ -208,7 +282,7 @@ def get_previous_outlooks(outlook):
 
     return prev_outlooks
 
-def post(subr,title,location,template_file,outlook,watches,post,update):
+def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,verbose):
 
     #Open credentials file and populate the praw object and various settings for posting to reddit
     credentials = 'client_secrets.json'
@@ -253,21 +327,33 @@ def post(subr,title,location,template_file,outlook,watches,post,update):
     if not watches_text:
         watches_text=[ "* *None in effect*" ]
 
+    #Define text for mesoscale discussions
+    mds_text=[]
+    for md in mds:
+        mds_text.append(f"[MD {md.no}: {md.concerning}]({md.url}), {md.area}")
+        for line in md.summary:
+            mds_text.append(f"\n>{line}")
+        mds_text.append("\n----")
+
+    if not mds_text:
+        mds_text=[ "* *None in effect*" ]
+
     prev_outlooks=get_previous_outlooks(outlook)
 
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update,previous_outlooks=prev_outlooks)
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update,previous_outlooks=prev_outlooks,mds_text="\n".join(mds_text))
 
     if not title and not update:
         title="[Megathread] " + location + " Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
 
-    if post:
-        print("Submitting text post to reddit:")
-    else:
-        print("This is what would be posted to reddit:")
-    print("Subreddit: ",subr)
-    print("Title: ",title)
-    print("Text: ")
-    print(selftext)
+    if verbose:
+        if post:
+            print("Submitting text post to reddit:")
+        else:
+            print("This is what would be posted to reddit:")
+        print("Subreddit: ",subr)
+        print("Title: ",title)
+        print("Text: ")
+        print(selftext)
     if post:
         if update:
             submission = reddit.submission(id=update)
@@ -284,20 +370,26 @@ if __name__ == '__main__':
     parser.add_argument('--update', help='"update" should provide the base-32 id of an existing post to update; if --post is not specified, this argument does nothing')
     parser.add_argument('--location', type=str, help='"location" should describe the location of the specific severe weather threat for the title of the post; if --post is not specified or if --update *is* specified, this argument does nothing')
     parser.add_argument('--sub', type=str, help='"sub" specifies the subreddit to submit to; if --post is not specified, this argument does nothing')
+    parser.add_argument('--verbose', type=str, help='Specify verbose output')
 
     args = parser.parse_args()
 
     if args.gotime:
         fn_outlooks="outlooks.txt"
         fn_watches="watches.txt"
+        fn_mds="mds.txt"
         res = requests.get('https://www.spc.noaa.gov/products/outlook/')
         if res.status_code != 200:
-            print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
+            print('WARNING: potentially unsuccessful HTTP status code from Outlook page: ', res.status_code)
         print(res.text, file=open(fn_outlooks, 'w'))
         res = requests.get('https://www.spc.noaa.gov/products/watch/')
         if res.status_code != 200:
-            print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
+            print('WARNING: potentially unsuccessful HTTP status code from Watch page: ', res.status_code)
         print(res.text, file=open(fn_watches, 'w'))
+        res = requests.get('https://www.spc.noaa.gov/products/md/')
+        if res.status_code != 200:
+            print('WARNING: potentially unsuccessful HTTP status code from MD page: ', res.status_code)
+        print(res.text, file=open(fn_mds, 'w'))
 
     else:
         print('Running in debug mode; specify argument "--gotime" to run the real deal')
@@ -310,6 +402,11 @@ if __name__ == '__main__':
 #Check for active watches, grab watch info, populate watch objects
     watches=check_watches(fn_watches)
 
+#Check for active mesoscale_discussions
+    mds=check_mds(fn_mds)
+
+    print(f"MDs: {mds}")
+
     if watches:
         watches=populate_watches(watches)
 #        print("Watches in effect:")
@@ -320,6 +417,11 @@ if __name__ == '__main__':
 #            print("")
     else:
         print("No watches in effect")
+
+    if mds:
+        mds=populate_mds(mds)
+    else:
+        print("No MDs for severe weather in effect")
 
     submissions=[]
 #    for outlook in outlooks:
@@ -344,7 +446,7 @@ if __name__ == '__main__':
         sub="weatherbot5000"
     else:
         sub=args.sub
-    submissions.append(post(sub,"",args.location,"jinja_template.md",outlooks[0],watches,args.post,args.update))
+    submissions.append(make_post(sub,"",args.location,"jinja_template.md",outlooks[0],watches,mds,args.post,args.update,args.verbose))
     if submissions[0] is not None:
         print("Successfully posted to reddit")
         for submission in submissions:
