@@ -175,6 +175,8 @@ def check_mds(fn):
                 x=re.split("[<>]", line)
                 mdconcerning=x[2]
                 print(mdconcerning)
+                # There are many types of mesoscale discussion, only some of which are related
+                # to ongoing severe weather.
                 if "SEVERE" in mdconcerning or "WATCH" in mdconcerning:
                     print(f'Appending MD {mdno[1]}, {mdconcerning}')
                     mds.append(MDType(no=mdno[1],concerning=mdconcerning))
@@ -242,9 +244,7 @@ def populate_mds(mds):
                     break
 
                 if "Probability of Watch Issuance" in line:
-                    line=fp.readline()
-                    while line.strip():
-                        md.prob= re.sub('[^0-9]', '', line)
+                    md.prob= re.sub('[^0-9]', '', line)
 
                 if "SUMMARY..." in line:
                     while line.strip():
@@ -331,6 +331,8 @@ def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,
     mds_text=[]
     for md in mds:
         mds_text.append(f"[MD {md.no}: {md.concerning}]({md.url}), {md.area}")
+        if md.prob:
+            mds_text.append(f"\n>{md.prob} percent chance of watch issuance\n")
         for line in md.summary:
             mds_text.append(f">{line.strip()}")
         mds_text.append("\n----")
@@ -395,6 +397,7 @@ if __name__ == '__main__':
         print('Running in debug mode; specify argument "--gotime" to run the real deal')
         fn_outlooks="outlooks_debug.txt"
         fn_watches="watches_debug.txt"
+        fn_mds="mds_debug.txt"
 
 #Check general severe risk for Day 1
     outlooks=check_risks(fn_outlooks)
