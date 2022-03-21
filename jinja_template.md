@@ -7,7 +7,7 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
 **Please avoid rapidly refreshing SPC pages, they can struggle under heavy load on days like today**
 
 * **[Latest Day 1 Convective Outlook](https://www.spc.noaa.gov/products/outlook/day1otlk.html)**
- * Previous Versions: [0600 UTC](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1otlk_{{yyyymmdd}}_1200.html) {{previous_outlooks}}
+ * Previous Versions: [0600 UTC](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1otlk_{{yyyymmdd}}_1200.html) {{previous_outlooks}} — [1300 UTC](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1otlk_{{yyyymmdd}}_1300.html) 
 
 
 **Latest risk maps (as of {{hhmm}} UTC, {{time_cdt}} CDT):**

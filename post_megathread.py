@@ -188,7 +188,7 @@ def populate_watches(watches):
 
     return watches
 
-def post(subr,title,template_file,outlook,watches,post,update):
+def post(subr,title,location,template_file,outlook,watches,post,update):
 
     #Open credentials file and populate the praw object and various settings for posting to reddit
     credentials = 'client_secrets.json'
@@ -235,8 +235,8 @@ def post(subr,title,template_file,outlook,watches,post,update):
 
     selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update)
 
-    if not title:
-        title="[Megathread] Southeastern US Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
+    if not title and not update:
+        title="[Megathread] " + location + " Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
 
     if post:
         print("Submitting text post to reddit:")
@@ -258,8 +258,10 @@ def post(subr,title,template_file,outlook,watches,post,update):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--gotime', action='store_true', help='"gotime" should be specified to actively run the script; otherwise it will be run in debug mode on the fixed input files in this directory')
-    parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode (will post to /r/wazoheat) or gotime mode (will post live to /r/weather).')
+    parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode or gotime mode')
     parser.add_argument('--update', help='"update" should provide the base-32 id of an existing post to update; if --post is not specified, this argument does nothing')
+    parser.add_argument('--location', type=str, help='"location" should describe the location of the specific severe weather threat for the title of the post; if --post is not specified or if --update *is* specified, this argument does nothing')
+    parser.add_argument('--sub', type=str, help='"sub" specifies the subreddit to submit to; if --post is not specified, this argument does nothing')
 
     args = parser.parse_args()
 
@@ -311,23 +313,20 @@ if __name__ == '__main__':
 #                if res.status_code != 200:
 #                    print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
 #
-#            submissions.append(post("wazoheat","","jinja_template.md",outlook,watches,args.post))
+#            submissions.append(post("weatherbot5000","","jinja_template.md",outlook,watches,args.post))
 
     if outlooks:
         outlooks=populate_risks(outlooks)
 
-    sub="wazoheat"
-#    if args.gotime:
-#        sub="weather"
-#    else:
-#        sub="wazoheat"
-    submissions.append(post(sub,"","jinja_template.md",outlooks[0],watches,args.post,args.update))
+    if args.sub is None:
+        sub="weatherbot5000"
+    else:
+        sub=args.sub
+    submissions.append(post(sub,"",args.location,"jinja_template.md",outlooks[0],watches,args.post,args.update))
     if submissions[0] is not None:
         print("Successfully posted to reddit")
         for submission in submissions:
             print("Post Title:",submission.title)
             print("Post ID:",submission.id)
             print("Post URL:",submission.url)
-    
-    
 
