@@ -254,6 +254,10 @@ def populate_mds(mds):
                 if "Areas affected..." in line:
                     x=re.split("Areas affected...", line)
                     md.area=x[1]
+                    line=fp.readline()
+                    while line.strip():
+                        md.area = md.area + line.strip()
+                        line=fp.readline()
 
         print(f'MD {md.no}')
         if md.prob:
