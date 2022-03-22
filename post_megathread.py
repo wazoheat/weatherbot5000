@@ -27,7 +27,7 @@ class MDType:
         self.easyurl = ""
         self.summary = kwargs.get('summary', [])
         self.prob    = ""
-        self.area = kwargs.get('area', [])
+        self.area = ""
 
 class OutlookType:
     now=datetime.datetime.now()
@@ -254,7 +254,9 @@ def populate_mds(mds):
                 if "Areas affected..." in line:
                     x=re.split("Areas affected...", line)
                     md.area=x[1]
+                    print(line)
                     line=fp.readline()
+                    print(line)
                     while line.strip():
                         md.area = md.area + line.strip()
                         line=fp.readline()
@@ -374,7 +376,7 @@ if __name__ == '__main__':
     parser.add_argument('--gotime', action='store_true', help='"gotime" should be specified to actively run the script; otherwise it will be run in debug mode on the fixed input files in this directory')
     parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode or gotime mode')
     parser.add_argument('--update', help='"update" should provide the base-32 id of an existing post to update; if --post is not specified, this argument does nothing')
-    parser.add_argument('--location', type=str, help='"location" should describe the location of the specific severe weather threat for the title of the post; if --post is not specified or if --update *is* specified, this argument does nothing')
+    parser.add_argument('--location', type=str, help='"location" should describe the location of the specific severe weather threat for the title of the post; if --post is not specified or if --update *is* specified, this argument does nothing',default="")
     parser.add_argument('--sub', type=str, help='"sub" specifies the subreddit to submit to; if --post is not specified, this argument does nothing')
     parser.add_argument('--verbose', action='store_true', help='Specify verbose output')
 
