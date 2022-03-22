@@ -97,13 +97,15 @@ def populate_risks(outlooks):
     for outlook in outlooks:
 
         fn_outlook="day" + str(outlook.day) + "outlook.txt"
-        if args.gotime:
+        if args.debug:
+            if args.verbose:
+                print('Running in debug mode; will use staged debug data in {fn_outlook} rather than scraping from web')
+        else:
             res = requests.get(outlook.easyurl)
             if res.status_code != 200:
                 print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
             print(res.text, file=open(fn_outlook, 'w'))
-        else:
-            print('Running in debug mode; specify argument "--gotime" to run the real deal')
+
         with open(fn_outlook) as fp:
             while True:
                 line = fp.readline()
@@ -187,13 +189,15 @@ def populate_watches(watches):
     for watch in watches:
 
         fn_watch="watch" + watch.no.zfill(4) + ".txt"
-        if args.gotime:
+        if args.debug:
+            if args.verbose:
+                print('Running in debug mode; will use staged debug data in {fn_watch} rather than scraping active pages')
+        else:
             res = requests.get(watch.url)
             if res.status_code != 200:
                 print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
             print(res.text, file=open(fn_watch, 'w'))
-        else:
-            print('Running in debug mode; specify argument "--gotime" to run the real deal')
+
         with open(fn_watch) as fp:
             while True:
                 line = fp.readline()
@@ -229,13 +233,14 @@ def populate_mds(mds):
     for md in mds:
 
         fn_md="md" + md.no.zfill(4) + ".txt"
-        if args.gotime:
+        if args.debug:
+            if args.verbose:
+                print('Running in debug mode; will use staged debug data in {fn_md} rather than scraping active pages')
+        else:
             res = requests.get(md.url)
             if res.status_code != 200:
                 print('WARNING: potentially unsuccessful HTTP status code for {md.url}: ', res.status_code)
             print(res.text, file=open(fn_md, 'w'))
-        else:
-            print('Running in debug mode; specify argument "--gotime" to run the real deal')
         with open(fn_md) as fp:
             while True:
                 line = fp.readline()
@@ -373,7 +378,7 @@ def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gotime', action='store_true', help='"gotime" should be specified to actively run the script; otherwise it will be run in debug mode on the fixed input files in this directory')
+    parser.add_argument('--debug', action='store_true', help='Script will be run in debug mode on the fixed input files in this directory')
     parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode or gotime mode')
     parser.add_argument('--update', help='"update" should provide the base-32 id of an existing post to update; if --post is not specified, this argument does nothing')
     parser.add_argument('--location', type=str, help='"location" should describe the location of the specific severe weather threat for the title of the post; if --post is not specified or if --update *is* specified, this argument does nothing',default="")
@@ -382,7 +387,12 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    if args.gotime:
+    if args.debug:
+        fn_outlooks="outlooks_debug.txt"
+        fn_watches="watches_debug.txt"
+        fn_mds="mds_debug.txt"
+        print('Running in debug mode; will read "*_debug.txt" files on disk rather than scraping web')
+    else:
         fn_outlooks="outlooks.txt"
         fn_watches="watches.txt"
         fn_mds="mds.txt"
@@ -398,12 +408,6 @@ if __name__ == '__main__':
         if res.status_code != 200:
             print('WARNING: potentially unsuccessful HTTP status code from MD page: ', res.status_code)
         print(res.text, file=open(fn_mds, 'w'))
-
-    else:
-        print('Running in debug mode; specify argument "--gotime" to run the real deal')
-        fn_outlooks="outlooks_debug.txt"
-        fn_watches="watches_debug.txt"
-        fn_mds="mds_debug.txt"
 
 #Check general severe risk for Day 1
     outlooks=check_risks(fn_outlooks)
@@ -438,7 +442,7 @@ if __name__ == '__main__':
 #        risk_post_levels = {'Enhanced', 'Moderate', 'High'}
 #        if outlook.risk in risk_post_levels:
 #            fn_outlook="day" + str(outlook.day) + "outlook.txt"
-#            if args.gotime:
+#            if not args.debug:
 #                res = requests.get(outlook.url)
 #                if res.status_code != 200:
 #                    print('WARNING: potentially unsuccessful HTTP status code: ', res.status_code)
