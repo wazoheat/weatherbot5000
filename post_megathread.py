@@ -7,6 +7,7 @@ import argparse
 import praw
 import json
 import datetime
+import pytz
 import os
 
 class WatchType:
@@ -32,7 +33,7 @@ class MDType:
 class OutlookType:
     now=datetime.datetime.now()
     now_utc=datetime.datetime.utcnow()
-    def __init__(self, outlookday=1, risk="", valid="", yyyymmdd=now.strftime("%Y%m%d"), yyyymmdd_utc=now_utc.strftime("%Y%m%d"), time_utc="", time_cdt="", summary_text="", **kwargs):
+    def __init__(self, outlookday=1, risk="", valid="", yyyymmdd=now.astimezone(pytz.timezone('America/Denver')).strftime("%Y%m%d"), yyyymmdd_utc=now_utc.strftime("%Y%m%d"), time_utc="", time_cdt="", summary_text="", **kwargs):
         self.day = outlookday
         self.risk = risk
         self.valid = valid
@@ -222,7 +223,7 @@ def populate_watches(watches):
                     while line.strip():
                         # If line is indented, this indicates it continues previous threat line
                         if re.search(r'^      ', line ):
-                            watch.threats[-1] = watch.threats[-1] + line.strip()
+                            watch.threats[-1] = watch.threats[-1] + " " + line.strip()
                         else:
                             watch.threats.append(line.strip())
                         line=fp.readline()
@@ -273,15 +274,28 @@ def populate_mds(mds):
         print(f"Summary:\n{md.summary}")
     return mds
 
-def get_previous_outlooks(outlook):
+def get_previous_outlooks(outlook,prev_day=False):
     """Checks for existance of previous daily outlooks, outputs them into a string for use in the megathread"""
+    print(f"outlook.day = {outlook.day}")
+    print(f"outlook.risk = {outlook.risk}")
+    print(f"outlook.valid = {outlook.valid}")
+    print(f"outlook.yyyymmdd = {outlook.yyyymmdd}")
+    print(f"outlook.yyyymmdd_utc = {outlook.yyyymmdd_utc}")
+    print(f"outlook.time_utc = {outlook.time_utc}")
+    print(f"outlook.time_cdt = {outlook.time_cdt}")
+    print(f"outlook.summary = {outlook.summary}")
+    print(f"outlook.arisk = {outlook.arisk}")
     prev_outlooks=""
     times=["1200","1300","1630","2000"]
     for time in times:
-        prev_outlook_url=f"https://www.spc.noaa.gov/products/outlook/archive/{outlook.yyyymmdd_utc[:4]}/day1otlk_{outlook.yyyymmdd_utc}_{time}.html"
+        # "prev_day" flag is for cases after 0000 UTC
+        if prev_day:
+            prev_outlook_url=f"https://www.spc.noaa.gov/products/outlook/archive/{outlook.yyyymmdd[:4]}/day1otlk_{outlook.yyyymmdd}_{time}.html"
+        else:
+            prev_outlook_url=f"https://www.spc.noaa.gov/products/outlook/archive/{outlook.yyyymmdd_utc[:4]}/day1otlk_{outlook.yyyymmdd_utc}_{time}.html"
         res = requests.get(prev_outlook_url)
         if res.status_code == 404:
-            print(f"Did not find {time}z outlook")
+            print(f"Did not find {time}z outlook: {prev_outlook_url}")
         else:
             if not prev_outlooks:
                 prev_outlooks=" * Previous Versions: "
@@ -290,6 +304,12 @@ def get_previous_outlooks(outlook):
                 prev_outlooks = prev_outlooks + f"[0600 UTC]({prev_outlook_url})"
             else:
                 prev_outlooks = prev_outlooks + f" — [{time} UTC]({prev_outlook_url})"
+
+    if not prev_outlooks:
+        if prev_day:
+           print(f"Didn't find any previous outlooks from today or yesterday, what did you do???")
+        else:
+           prev_outlooks=get_previous_outlooks(outlook,prev_day=True)
 
     return prev_outlooks
 
@@ -377,6 +397,7 @@ def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,
         return submission
 
 if __name__ == '__main__':
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('--debug', action='store_true', help='Script will be run in debug mode on the fixed input files in this directory')
     parser.add_argument('--post', action='store_true', help='"post" should be specified to post to reddit; this will work in debug mode or gotime mode')
