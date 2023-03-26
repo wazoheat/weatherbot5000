@@ -12,7 +12,7 @@ The Storm Prediction Center has issued **{{arisk}} Risk** for severe weather for
 
 **Latest risk maps (as of {{hhmm}} UTC, {{time_cdt}} CDT):**
 
-* [All severe weather](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1otlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_prt.gif) — [Tornadoes](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1probotlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_torn_prt.gif) — [Straight-line wind](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1probotlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_wind_prt.gif) — [Hail](https://www.spc.noaa.gov/products/outlook/archive/{{yyyy}}/day1probotlk_{{yyyy}}{{mm}}{{dd}}_{{hhmm}}_hail_prt.gif)
+* [All severe weather]({{images["all"]}}) — [Tornadoes]({{images["torn"]}}) — [Straight-line wind]({{images["wind"]}}) — [Hail]({{images["hail"]}})
 
 **Severe Thunderstorm/Tornado Watches:**
 

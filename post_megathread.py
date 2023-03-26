@@ -9,6 +9,8 @@ import json
 import datetime
 import pytz
 import os
+import sys
+import shutil
 
 class WatchType:
     def __init__(self, no=0, type="Severe Thunderstorm", pds=False, **kwargs):
@@ -49,6 +51,52 @@ class OutlookType:
         else:
             self.arisk = "a " + self.risk
         self.prev = kwargs.get('prev', [])
+        # Dictionary of outlook map URLs
+        self.images = {}
+
+
+def get_outlook_image(url,name,subdir):
+
+    # Download outlook images locally
+    imageloc = os.path.join(subdir,name + ".gif")
+    os.makedirs(subdir, exist_ok=True)
+
+    res = requests.get(url, stream = True)
+    if res.status_code == 200:
+        with open(imageloc,'wb') as f:
+            shutil.copyfileobj(res.raw, f)
+        print('Image sucessfully Downloaded: ',name)
+    else:
+        print(f"Couldn't get image from {url}")
+
+    # If we haven't already saved an image URL, upload it to reddit
+    if not os.path.isfile(imageloc + ".txt"):
+        #Open credentials file and populate the praw object and various settings for posting to reddit
+        credentials = 'client_secrets.json'
+        with open(credentials) as f:
+            creds = json.load(f)
+
+        reddit = praw.Reddit(client_id=creds['client_id'],
+                         client_secret=creds['client_secret'],
+                         user_agent=creds['user_agent'],
+                         redirect_uri=creds['redirect_uri'],
+                         refresh_token=creds['refresh_token'])
+
+        reddit.validate_on_submit = True
+
+        subreddit = reddit.subreddit("weatherbot5000")
+        upload = subreddit.submit_image(title=f'Severe weather outlook {name} risk {subdir}', image_path=imageloc)
+        with open(imageloc + ".txt", 'w') as f:
+            f.write(upload.url)
+        print("Post Title:",upload.title)
+        print("Post ID:",upload.id)
+        print("Post URL:",upload.url)
+
+        return(upload.url)
+    else:
+        with open(imageloc + ".txt","r") as f:
+            url = f.read()
+        return(url)
 
 def check_risks(fn):
     with open(fn) as fp:
@@ -80,11 +128,15 @@ def check_risks(fn):
                 mm=outlooks[-1].yyyymmdd_utc[4:6]
                 dd=outlooks[-1].yyyymmdd_utc[6:]
                 for time in times:
-                    testurl="https://www.spc.noaa.gov/products/outlook/archive/" + yyyy + "/day" + str(day) + "otlk_" + outlooks[-1].yyyymmdd_utc + "_" + time + ".html"
+                    testurl=f"https://www.spc.noaa.gov/products/outlook/archive/{yyyy}/day{str(day)}otlk_{outlooks[-1].yyyymmdd_utc}_{time}.html"
                     res = requests.get(testurl)
                     if res.status_code == 200:
                         outlooks[-1].easyurl=testurl
+                        outlooks[-1].images["all"]=get_outlook_image(f"https://www.spc.noaa.gov/products/outlook/archive/{yyyy}/day{str(day)}otlk_{yyyy}{mm}{dd}_{time}_prt.gif","all",f"{yyyy}{mm}{dd}_{time}")
+                        for severetype in ["torn","wind","hail"]:
+                            outlooks[-1].images[severetype]=get_outlook_image(f"https://www.spc.noaa.gov/products/outlook/archive/{yyyy}/day{str(day)}probotlk_{yyyy}{mm}{dd}_{time}_{severetype}_prt.gif",severetype,f"{yyyy}{mm}{dd}_{time}")
                         outlooks[-1].valid=time
+                        print(outlooks[-1].images)
                         break
                 date_time_str = outlooks[-1].yyyymmdd_utc + outlooks[-1].valid + " +0000"
                 outlooks[-1].time_utc = datetime.datetime.strptime(date_time_str, '%Y%m%d%H%M %z')
@@ -373,7 +425,7 @@ def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,
 
     prev_outlooks=get_previous_outlooks(outlook)
 
-    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update,previous_outlooks=prev_outlooks,mds_text="\n".join(mds_text))
+    selftext = template.render(risk_level=outlook.risk,arisk=outlook.arisk,num_watches=len(watches),day_of_week=now.strftime("%A"),month=now.strftime("%B"),dd=outlook.yyyymmdd_utc[-2:],mm=outlook.yyyymmdd_utc[-4:-2],yyyy=outlook.yyyymmdd_utc[:4],yyyymmdd=outlook.yyyymmdd_utc,watches_text="\n".join(watches_text),hhmm=outlook.valid,other_notes=other_notes,time_cdt=outlook.time_cdt.strftime("%H:%M"),summary_text=outlook.summary,post_id=update,previous_outlooks=prev_outlooks,mds_text="\n".join(mds_text),images=outlook.images)
 
     if not title and not update:
         title="[Megathread] " + location + " Severe Weather Discussion, " + now.strftime("%A") + ", " + now.strftime("%B") + " " + outlook.yyyymmdd[-2:] +", " + outlook.yyyymmdd[:4]
