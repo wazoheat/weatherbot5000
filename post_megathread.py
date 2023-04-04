@@ -381,12 +381,11 @@ def make_post(subr,title,location,template_file,outlook,watches,mds,post,update,
     subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
     reddit.validate_on_submit = True
 
-    # Check for 'other_notes.txt', the file that will be appended as-is near the end of the post
+    # Check for additional notes from Wiki page
 
-    other_notes=''
-    if os.path.isfile('other_notes.txt'):
-        with open('other_notes.txt', "r") as text_file:
-            other_notes = text_file.read()
+    wiki = subreddit.wiki["megathread/other_notes"]
+
+    other_notes = wiki.content_md
 
     now=datetime.datetime.now()
 
